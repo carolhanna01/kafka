@@ -1,0 +1,104 @@
+rss:
+  '@version': '0.92'
+  channel:
+    build-info:
+      build-date: 22-06-2022
+      build-number: '820010'
+      version: 8.20.10
+    description: This file is an XML representation of an issue
+    item:
+      assignee:
+        '#text': Colin McCabe
+        '@username': cmccabe
+      attachments: null
+      created: Thu, 29 Sep 2022 00:01:53 +0000
+      customfields:
+        customfield:
+        - '@id': customfield_12310310
+          '@key': com.atlassian.jira.toolkit:attachments
+          customfieldname: Attachment count
+          customfieldvalues:
+            customfieldvalue: '0.0'
+        - '@id': customfield_12314020
+          '@key': com.atlassian.jira.plugins.jira-development-integration-plugin:devsummary
+          customfieldname: Development
+          customfieldvalues: null
+        - '@id': customfield_12313422
+          '@key': com.atlassian.jirafisheyeplugin:jobcheckbox
+          customfieldname: Enable Automatic Patch Review
+          customfieldvalues:
+            customfieldvalue: 'false'
+        - '@id': customfield_12310420
+          '@key': com.pyxis.greenhopper.jira:gh-global-rank
+          customfieldname: Global Rank
+          customfieldvalues:
+            customfieldvalue: '9223372036854775807'
+        - '@id': customfield_12312521
+          '@key': com.atlassian.jira.toolkit:LastCommentDate
+          customfieldname: Last public comment date
+          customfieldvalues: 2 years, 32 weeks ago
+        - '@id': customfield_12311820
+          '@key': com.pyxis.greenhopper.jira:gh-lexo-rank
+          customfieldname: Rank
+          customfieldvalues:
+            customfieldvalue: '0|z18xkg:'
+        - '@id': customfield_12310920
+          '@key': com.pyxis.greenhopper.jira:gh-global-rank
+          customfieldname: Rank (Obsolete)
+          customfieldvalues:
+            customfieldvalue: '9223372036854775807'
+      description: '<p>Prefix ACLs may shadow other prefix ACLs. Consider the case
+        where we have prefix ACLs for foobar, fooa, and f. If we were matching a resource
+        named "foobar", we''d start scanning at the foobar ACL, hit the fooa ACL,
+        and stop &#8211; missing the f ACL.</p>
+
+
+        <p>To fix this, we should re-scan for ACLs at the first divergence point (in
+        this case, f) whenever we hit a mismatch of this kind.</p>'
+      due: null
+      environment: null
+      fixVersion: 3.3.1
+      key:
+        '#text': KAFKA-14265
+        '@id': '13483736'
+      labels: null
+      link: https://issues.apache.org/jira/browse/KAFKA-14265
+      priority:
+        '#text': Blocker
+        '@iconUrl': https://issues.apache.org/jira/images/icons/priorities/blocker.svg
+        '@id': '1'
+      project:
+        '#text': Kafka
+        '@id': '12311720'
+        '@key': KAFKA
+      reporter:
+        '#text': Colin McCabe
+        '@username': cmccabe
+      resolution:
+        '#text': Fixed
+        '@id': '1'
+      resolved: Thu, 29 Sep 2022 18:20:44 +0000
+      status:
+        '#text': Resolved
+        '@description': A resolution has been taken, and it is awaiting verification
+          by reporter. From here issues are either reopened, or are closed.
+        '@iconUrl': https://issues.apache.org/jira/images/icons/statuses/resolved.png
+        '@id': '5'
+      statusCategory:
+        '@colorName': green
+        '@id': '3'
+        '@key': done
+      subtasks: null
+      summary: Prefix ACLs may shadow other prefix ACLs
+      title: '[KAFKA-14265] Prefix ACLs may shadow other prefix ACLs'
+      type:
+        '#text': Bug
+        '@iconUrl': https://issues.apache.org/jira/secure/viewavatar?size=xsmall&avatarId=21133&avatarType=issuetype
+        '@id': '1'
+      updated: Fri, 30 Sep 2022 14:02:27 +0000
+      version: 3.3.0
+      votes: '0'
+      watches: '1'
+    language: en-uk
+    link: https://issues.apache.org/jira
+    title: ASF JIRA

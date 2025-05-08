@@ -1,0 +1,792 @@
+
+> Configure project :
+Starting build with version 3.4.0-SNAPSHOT (commit id unknown) using Gradle 7.5.1, Java 11 and Scala 2.13.8
+Build properties: maxParallelForks=8, maxScalacThreads=8, maxTestRetries=0
+
+> Task :raft:processResources UP-TO-DATE
+> Task :server-common:processResources NO-SOURCE
+> Task :metadata:processResources UP-TO-DATE
+> Task :server-common:processTestResources NO-SOURCE
+> Task :raft:processTestResources UP-TO-DATE
+> Task :metadata:processTestResources UP-TO-DATE
+> Task :server-common:createVersionFile UP-TO-DATE
+> Task :raft:createVersionFile UP-TO-DATE
+> Task :generator:compileJava UP-TO-DATE
+> Task :clients:processResources UP-TO-DATE
+> Task :generator:processResources NO-SOURCE
+> Task :generator:classes UP-TO-DATE
+> Task :clients:createVersionFile UP-TO-DATE
+> Task :clients:processTestResources UP-TO-DATE
+> Task :generator:jar UP-TO-DATE
+> Task :metadata:processMessages UP-TO-DATE
+> Task :raft:processMessages UP-TO-DATE
+> Task :clients:processMessages UP-TO-DATE
+> Task :clients:compileJava UP-TO-DATE
+> Task :clients:classes UP-TO-DATE
+> Task :clients:jar UP-TO-DATE
+> Task :clients:processTestMessages UP-TO-DATE
+> Task :server-common:compileJava UP-TO-DATE
+> Task :server-common:classes UP-TO-DATE
+> Task :server-common:jar UP-TO-DATE
+> Task :raft:compileJava UP-TO-DATE
+> Task :raft:classes UP-TO-DATE
+> Task :raft:jar UP-TO-DATE
+> Task :metadata:compileJava UP-TO-DATE
+> Task :metadata:classes UP-TO-DATE
+> Task :clients:compileTestJava UP-TO-DATE
+> Task :clients:testClasses UP-TO-DATE
+> Task :metadata:checkstyleMain UP-TO-DATE
+> Task :server-common:compileTestJava UP-TO-DATE
+> Task :server-common:testClasses UP-TO-DATE
+> Task :raft:compileTestJava UP-TO-DATE
+> Task :raft:testClasses UP-TO-DATE
+> Task :metadata:spotbugsMain UP-TO-DATE
+> Task :metadata:compileTestJava UP-TO-DATE
+> Task :metadata:testClasses UP-TO-DATE
+> Task :metadata:checkstyleTest UP-TO-DATE
+
+> Task :metadata:test
+
+Gradle Test Run :metadata:test > Gradle Test Executor 46 > AclControlManagerTest > testValidateFilter() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 46 > AclControlManagerTest > testValidateNewAcl() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 48 > BrokerHeartbeatManagerTest > testNextCheckTimeNs() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 48 > BrokerHeartbeatManagerTest > testFindOneStaleBroker() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 48 > BrokerHeartbeatManagerTest > testUsableBrokerIterator() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 45 > PartitionChangeBuilderTest > testIsrEnlargementCompletesReassignment() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 48 > BrokerHeartbeatManagerTest > testMetadataOffsetComparator() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 45 > PartitionChangeBuilderTest > testElectLeader() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 45 > PartitionChangeBuilderTest > testChangeRecordIsNoOp() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 48 > BrokerHeartbeatManagerTest > testCalculateNextBrokerState() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 47 > LogReplayTrackerTest > testEmpty() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 45 > PartitionChangeBuilderTest > testRemovingReplicaReassignment() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 48 > BrokerHeartbeatManagerTest > testBrokerHeartbeatStateList() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 48 > BrokerHeartbeatManagerTest > testHasValidSession() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 45 > PartitionChangeBuilderTest > testAddingReplicaReassignment() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 48 > PartitionReassignmentRevertTest > testSomeRemoving() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 48 > PartitionReassignmentRevertTest > testNoneAddedOrRemoved() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 48 > PartitionReassignmentRevertTest > testSomeRemovingAndAdding() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 49 > BrokersToIsrsTest > testLeadersOnlyIterator() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 46 > AclControlManagerTest > testLoadSnapshot() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 48 > PartitionReassignmentRevertTest > testIsrSpecialCase() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 48 > PartitionReassignmentRevertTest > testSomeAdding() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 49 > BrokersToIsrsTest > testNoLeader() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 46 > AclControlManagerTest > testDeleteDedupe() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 49 > BrokersToIsrsTest > testIterator() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 49 > ControllerPurgatoryTest > testFailEvents() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 49 > ControllerPurgatoryTest > testCompleteEvents() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 49 > ControllerPurgatoryTest > testFailOnIncorrectOrdering() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 48 > ClusterImageTest > testEmptyImageRoundTrip() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 48 > ClusterImageTest > testApplyDelta1() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 48 > ClusterImageTest > testImage2RoundTrip() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 48 > ClusterImageTest > testImage1RoundTrip() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 48 > BrokerRegistrationInControlledShutdownChangeTest > testValueRoundTrip() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 48 > BrokerRegistrationInControlledShutdownChangeTest > testAsBoolean() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 48 > BrokerRegistrationInControlledShutdownChangeTest > testValues() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 48 > OptionalStringComparatorTest > testComparisons() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 48 > BootstrapMetadataTest > testFromRecordsListWithOldMetadataVersion() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 47 > SnapshotGeneratorTest > testGenerateBatches() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 48 > BootstrapMetadataTest > testCopyWithOnlyVersion() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 48 > BootstrapMetadataTest > testFromRecordsList() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 48 > BootstrapMetadataTest > testFromVersion() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 48 > BootstrapMetadataTest > testFromRecordsListWithoutMetadataVersion() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 47 > KafkaConfigSchemaTest > testTranslateConfigTypes() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 47 > KafkaConfigSchemaTest > testIsSplittable() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 47 > KafkaConfigSchemaTest > testResolveEffectiveTopicConfig() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 45 > PartitionChangeBuilderTest > testUncleanSetsLeaderRecoveringState(boolean) > org.apache.kafka.controller.PartitionChangeBuilderTest.testUncleanSetsLeaderRecoveringState(boolean)[1] PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 48 > SnapshottableHashTableTest > testIterateOverSnapshotWhileExpandingTable() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 47 > KafkaConfigSchemaTest > testTranslateConfigSources() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 48 > SnapshottableHashTableTest > testEmptyTable() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 47 > KafkaConfigSchemaTest > testGetConfigValueDefault() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 47 > KafkaConfigSchemaTest > testIsSensitive() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 45 > PartitionChangeBuilderTest > testUncleanSetsLeaderRecoveringState(boolean) > org.apache.kafka.controller.PartitionChangeBuilderTest.testUncleanSetsLeaderRecoveringState(boolean)[2] PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 48 > SnapshottableHashTableTest > testReset() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 49 > ProducerIdControlManagerTest > testUnknownBrokerOrEpoch() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 47 > VersionRangeTest > testToString() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 47 > VersionRangeTest > testContains() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 45 > PartitionChangeBuilderTest > testReassignmentRearrangesReplicas() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 47 > VersionRangeTest > testEquality() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 48 > SnapshottableHashTableTest > testDeleteOnEmptyDeltaTable() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 48 > SnapshottableHashTableTest > testIterateOverSnapshotWhileDeletingAndReplacing() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 45 > PartitionChangeBuilderTest > testIsrChangeAndLeaderBump() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 49 > ProducerIdControlManagerTest > testMonotonic() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 48 > SnapshottableHashTableTest > testAddAndRemove() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 47 > StandardAclWithIdTest > testToRecordRoundTrips() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 45 > PartitionChangeBuilderTest > testNoChange() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 47 > StandardAclWithIdTest > testEquals() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 48 > SnapshottableHashTableTest > testIterateOverSnapshot() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 48 > SnapshottableHashTableTest > testRevert() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 49 > ProducerIdControlManagerTest > testSnapshotIterator() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 45 > PartitionChangeBuilderTest > testChangeInLeadershipDoesNotChangeRecoveryState(boolean) > org.apache.kafka.controller.PartitionChangeBuilderTest.testChangeInLeadershipDoesNotChangeRecoveryState(boolean)[1] PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 47 > TimelineLongTest > testModifyValue() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 49 > ProducerIdControlManagerTest > testMaxValue() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 46 > AclControlManagerTest > testCreateAclDeleteAcl() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 45 > PartitionChangeBuilderTest > testChangeInLeadershipDoesNotChangeRecoveryState(boolean) > org.apache.kafka.controller.PartitionChangeBuilderTest.testChangeInLeadershipDoesNotChangeRecoveryState(boolean)[2] PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 47 > TimelineLongTest > testReset() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 47 > TimelineLongTest > testSnapshot() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 46 > AclControlManagerTest > testAddAndDelete() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 45 > PartitionChangeBuilderTest > testUncleanLeaderElection() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 47 > TimelineLongTest > testToStringAndEquals() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 49 > ProducerIdControlManagerTest > testInitialResult() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 45 > PartitionChangeBuilderTest > testIsrChangeAndLeaderChange() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 45 > PartitionChangeBuilderTest > testTriggerLeaderEpochBumpIfNeeded() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 45 > PartitionChangeBuilderTest > testRevertReassignment() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 49 > ConfigurationsImageTest > testEmptyImageRoundTrip() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 49 > ConfigurationsImageTest > testApplyDelta1() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 45 > AclsImageTest > testEmptyImageRoundTrip() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 49 > ConfigurationsImageTest > testImage2RoundTrip() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 46 > ConfigurationControlManagerTest > testIncrementalAlterConfigsWithoutExistence() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 45 > AclsImageTest > testApplyDelta1() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 49 > ConfigurationsImageTest > testImage1RoundTrip() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 45 > AclsImageTest > testImage2RoundTrip() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 46 > ConfigurationControlManagerTest > testIncrementalAlterConfigs() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 45 > AclsImageTest > testImage1RoundTrip() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 49 > BrokerRegistrationTest > testToString() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 46 > ConfigurationControlManagerTest > testIncrementalAlterConfigsWithPolicy() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 49 > BrokerRegistrationTest > testFromRecordAndToRecord() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 49 > BrokerRegistrationTest > testEquals() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 46 > ConfigurationControlManagerTest > testLegacyAlterConfigs() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 49 > BrokerRegistrationTest > testToNode() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 45 > TopicsImageTest > testDeleteAfterChanges() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 46 > ConfigurationControlManagerTest > testIncrementalAlterMultipleConfigValues() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 49 > BrokerRegistrationTest > testValues() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 45 > TopicsImageTest > testLocalReassignmentChanges() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 46 > ConfigurationControlManagerTest > testReplay() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 45 > TopicsImageTest > testTopicNameToIdView() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 45 > TopicsImageTest > testBasicLocalChanges() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 49 > PartitionRegistrationTest > testToLeaderAndIsrPartitionState() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 49 > PartitionRegistrationTest > testRecordRoundTrip() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 45 > TopicsImageTest > testEmptyImageRoundTrip() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 49 > PartitionRegistrationTest > testMergePartitionChangeRecordWithReassignmentData() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 46 > PartitionReassignmentReplicasTest > testRearrangement() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 45 > TopicsImageTest > testTopicIdToNameView() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 45 > TopicsImageTest > testApplyDelta1() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 46 > PartitionReassignmentReplicasTest > testNoneAddedOrRemoved() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 49 > PartitionRegistrationTest > testPartitionControlInfoMergeAndDiff() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 45 > TopicsImageTest > testImage2RoundTrip() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 46 > PartitionReassignmentReplicasTest > testRemovals() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 45 > TopicsImageTest > testImage1RoundTrip() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 49 > PartitionRegistrationTest > testElectionWasClean() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 46 > PartitionReassignmentReplicasTest > testAdditionsAndRemovals() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 46 > PartitionReassignmentReplicasTest > testAdditions() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 45 > MetadataRecordSerdeTest > testDeserializeWithUnhandledFrameVersion() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 49 > StripedReplicaPlacerTest > testNonPositiveReplicationFactor() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 49 > StripedReplicaPlacerTest > testPlacementOnFencedReplicaOnSingleRack() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 45 > MetadataRecordSerdeTest > testParsingMalformedFrameVersionVarint() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 45 > MetadataRecordSerdeTest > testParsingVersionTooLarge() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 49 > StripedReplicaPlacerTest > testRackListAllBrokersFenced() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 45 > MetadataRecordSerdeTest > testSerde() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 45 > MetadataRecordSerdeTest > testParsingMalformedMessageVersionVarint() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 46 > QuorumFeaturesTest > testDefaultSupportedLevels() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 49 > StripedReplicaPlacerTest > testRackListNotEnoughBrokers() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 46 > QuorumFeaturesTest > testLocalSupportedFeature() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 49 > StripedReplicaPlacerTest > testRackListWithMultipleRacks() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 45 > MetadataRecordSerdeTest > testParsingMalformedMessage() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 49 > StripedReplicaPlacerTest > testAllBrokersFenced() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 49 > StripedReplicaPlacerTest > testNotEnoughBrokers() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 45 > MetadataRecordSerdeTest > testParsingUnsupportedApiKey() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 49 > StripedReplicaPlacerTest > testMultiPartitionTopicPlacementOnSingleUnfencedBroker() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 45 > MetadataRecordSerdeTest > testParsingMalformedMessageTypeVarint() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 49 > StripedReplicaPlacerTest > testBrokerList() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 49 > StripedReplicaPlacerTest > testSuccessfulPlacement() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 49 > StripedReplicaPlacerTest > testEvenDistribution() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 45 > MetadataRecordSerdeTest > testParsingRecordWithGarbageAtEnd() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 49 > StripedReplicaPlacerTest > testAvoidFencedReplicaIfPossibleOnSingleRack() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 49 > StripedReplicaPlacerTest > testRackListNonPositiveReplicationFactor() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 49 > StripedReplicaPlacerTest > testRackListWithInvalidRacks() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 45 > SnapshotRegistryTest > testEmptyRegistry() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 45 > SnapshotRegistryTest > testCreateSnapshots() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 45 > SnapshotRegistryTest > testDeleteSnapshotUpTo() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 45 > SnapshotRegistryTest > testCreateAndDeleteSnapshots() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 45 > SnapshotRegistryTest > testCreateSnapshotOfLatest() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 49 > LocalLogManagerTest > testCreateAndClose() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 49 > LocalLogManagerTest > testPassLeadership() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 49 > LocalLogManagerTest > testCommits() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 49 > LocalLogManagerTest > testClaimsLeadership() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 49 > TimelineHashMapTest > testIteration() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 49 > TimelineHashMapTest > testMapMethods() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 49 > TimelineHashMapTest > testMapEquals() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 49 > TimelineHashMapTest > testNullsForbidden() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 49 > TimelineHashMapTest > testEmptyMap() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 44 > QuorumControllerTest > testSnapshotOnlyAfterConfiguredMinBytes() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 44 > QuorumControllerTest > testInsertBootstrapRecordsToEmptyLog() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 44 > QuorumControllerTest > testAppendRecords() PASSED
+org.apache.kafka.metadata.authorizer.StandardAuthorizerTest.testPrefixAcls() failed, log available in /home/carol/Desktop/benchmark/bugs-dot-jar/kafka/metadata/build/reports/testOutput/org.apache.kafka.metadata.authorizer.StandardAuthorizerTest.testPrefixAcls().test.stdout
+
+Gradle Test Run :metadata:test > Gradle Test Executor 43 > StandardAuthorizerTest > testPrefixAcls() FAILED
+    org.opentest4j.AssertionFailedError: expected: <[ALLOWED, DENIED, ALLOWED]> but was: <[DENIED, DENIED, ALLOWED]>
+        at app//org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+        at app//org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+        at app//org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+        at app//org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+        at app//org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+        at app//org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1141)
+        at app//org.apache.kafka.metadata.authorizer.StandardAuthorizerTest.testPrefixAcls(StandardAuthorizerTest.java:656)
+
+Gradle Test Run :metadata:test > Gradle Test Executor 43 > StandardAuthorizerTest > testFindResultPrincipalMatching() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 43 > StandardAuthorizerTest > testAuthorizationWithManyAcls() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 44 > QuorumControllerTest > testTimeouts() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 46 > QuorumFeaturesTest > testReasonNotSupported() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 50 > ClientQuotaControlManagerTest > testInvalidEntityTypes() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 44 > QuorumControllerTest > testCreateAndClose() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 46 > ClientQuotasImageTest > testEmptyImageRoundTrip() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 46 > ClientQuotasImageTest > testApplyDelta1() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 46 > ClientQuotasImageTest > testImage2RoundTrip() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 46 > ClientQuotasImageTest > testImage1RoundTrip() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 46 > BrokerRegistrationFencingChangeTest > testValueRoundTrip() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 46 > BrokerRegistrationFencingChangeTest > testAsBoolean() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 46 > BrokerRegistrationFencingChangeTest > testValues() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 50 > ClientQuotaControlManagerTest > testEntityTypes() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 50 > ClientQuotaControlManagerTest > testInvalidQuotaKeys() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 46 > ClusterMetadataAuthorizerTest > testDeleteAclsError() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 46 > ClusterMetadataAuthorizerTest > testCreateAclsError() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 46 > ClusterMetadataAuthorizerTest > testCreateAcls() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 46 > ClusterMetadataAuthorizerTest > testDeleteAcls() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 50 > ClientQuotaControlManagerTest > testAlterAndRemove() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 46 > BootstrapDirectoryTest > testMissingDirectory() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 44 > QuorumControllerTest > testUpgradeFromPreProductionVersion() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 46 > BootstrapDirectoryTest > testReadFromConfiguration() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 46 > BootstrapDirectoryTest > testReadFromConfigurationFile() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 46 > BootstrapDirectoryTest > testReadFromConfigurationWithAncientVersion() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 46 > BootstrapDirectoryTest > testReadFromEmptyConfiguration() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 44 > QuorumControllerTest > testSnapshotConfiguration() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 50 > QuorumControllerMetricsTest > testLastAppliedRecordMetrics() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 50 > QuorumControllerMetricsTest > testMetadataErrorCount() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 50 > QuorumControllerMetricsTest > testUpdateEventQueueProcessingTime() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 50 > QuorumControllerMetricsTest > testControllerEventManagerMetricNames() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 50 > QuorumControllerMetricsTest > testUpdateEventQueueTime() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 50 > QuorumControllerMetricsTest > testKafkaControllerMetricNames() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 50 > ReplicationControlManagerTest > testCreatePartitionsISRInvariants() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 50 > ReplicationControlManagerTest > testShrinkAndExpandIsr() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 50 > ReplicationControlManagerTest > testRemoveLeaderships() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 50 > ReplicationControlManagerTest > testCreateTopics() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 50 > ReplicationControlManagerTest > testCreatePartitionsFailsWithManualAssignmentWithAllFenced() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 50 > ReplicationControlManagerTest > testCreateTopicsWithValidateOnlyFlag() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 50 > ReplicationControlManagerTest > testCreatePartitionsFailsWhenAllBrokersAreFencedOrInControlledShutdown() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 50 > ReplicationControlManagerTest > testReassignPartitions(short) > org.apache.kafka.controller.ReplicationControlManagerTest.testReassignPartitions(short)[1] PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 50 > ReplicationControlManagerTest > testReassignPartitions(short) > org.apache.kafka.controller.ReplicationControlManagerTest.testReassignPartitions(short)[2] PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 50 > ReplicationControlManagerTest > testReassignPartitions(short) > org.apache.kafka.controller.ReplicationControlManagerTest.testReassignPartitions(short)[3] PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 50 > ReplicationControlManagerTest > testGlobalTopicAndPartitionMetrics() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 50 > ReplicationControlManagerTest > testElectPreferredLeaders() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 50 > ReplicationControlManagerTest > testAlterPartitionHandleUnknownTopicIdOrName(short) > org.apache.kafka.controller.ReplicationControlManagerTest.testAlterPartitionHandleUnknownTopicIdOrName(short)[1] PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 50 > ReplicationControlManagerTest > testAlterPartitionHandleUnknownTopicIdOrName(short) > org.apache.kafka.controller.ReplicationControlManagerTest.testAlterPartitionHandleUnknownTopicIdOrName(short)[2] PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 50 > ReplicationControlManagerTest > testAlterPartitionHandleUnknownTopicIdOrName(short) > org.apache.kafka.controller.ReplicationControlManagerTest.testAlterPartitionHandleUnknownTopicIdOrName(short)[3] PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 50 > ReplicationControlManagerTest > testAlterPartitionShouldRejectShuttingDownBrokers(short) > org.apache.kafka.controller.ReplicationControlManagerTest.testAlterPartitionShouldRejectShuttingDownBrokers(short)[1] PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 50 > ReplicationControlManagerTest > testAlterPartitionShouldRejectShuttingDownBrokers(short) > org.apache.kafka.controller.ReplicationControlManagerTest.testAlterPartitionShouldRejectShuttingDownBrokers(short)[2] PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 50 > ReplicationControlManagerTest > testAlterPartitionShouldRejectShuttingDownBrokers(short) > org.apache.kafka.controller.ReplicationControlManagerTest.testAlterPartitionShouldRejectShuttingDownBrokers(short)[3] PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 50 > ReplicationControlManagerTest > testValidateGoodManualPartitionAssignments() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 50 > ReplicationControlManagerTest > testCreateTopicsWithConfigs() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 50 > ReplicationControlManagerTest > testTopicNameCollision() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 50 > ReplicationControlManagerTest > testCancelReassignPartitions() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 50 > ReplicationControlManagerTest > testValidateNewTopicNames() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 50 > ReplicationControlManagerTest > testFenceMultipleBrokers() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 50 > ReplicationControlManagerTest > testBalancePartitionLeaders() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 50 > ReplicationControlManagerTest > testInvalidAlterPartitionRequests() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 50 > ReplicationControlManagerTest > testBrokerCountMetrics() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 50 > ReplicationControlManagerTest > testDeleteTopics() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 50 > ReplicationControlManagerTest > testOfflinePartitionAndReplicaImbalanceMetrics() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 50 > ReplicationControlManagerTest > testCreatePartitions() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 50 > ReplicationControlManagerTest > testInvalidCreateTopicsWithValidateOnlyFlag() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 50 > ReplicationControlManagerTest > testManualPartitionAssignmentOnAllFencedBrokers() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 50 > ReplicationControlManagerTest > testAlterPartitionShouldRejectFencedBrokers(short) > org.apache.kafka.controller.ReplicationControlManagerTest.testAlterPartitionShouldRejectFencedBrokers(short)[1] PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 50 > ReplicationControlManagerTest > testAlterPartitionShouldRejectFencedBrokers(short) > org.apache.kafka.controller.ReplicationControlManagerTest.testAlterPartitionShouldRejectFencedBrokers(short)[2] PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 50 > ReplicationControlManagerTest > testAlterPartitionShouldRejectFencedBrokers(short) > org.apache.kafka.controller.ReplicationControlManagerTest.testAlterPartitionShouldRejectFencedBrokers(short)[3] PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 50 > ReplicationControlManagerTest > testCreateTopicsWithPolicy() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 50 > ReplicationControlManagerTest > testPreferredElectionDoesNotTriggerUncleanElection() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 50 > ReplicationControlManagerTest > testValidateBadManualPartitionAssignments() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 50 > ReplicationControlManagerTest > testElectUncleanLeaders(boolean) > org.apache.kafka.controller.ReplicationControlManagerTest.testElectUncleanLeaders(boolean)[1] PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 50 > ReplicationControlManagerTest > testElectUncleanLeaders(boolean) > org.apache.kafka.controller.ReplicationControlManagerTest.testElectUncleanLeaders(boolean)[2] PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 50 > ReplicationControlManagerTest > testKRaftClusterDescriber() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 50 > ReplicationControlManagerTest > testProcessBrokerHeartbeatInControlledShutdown(MetadataVersion) > org.apache.kafka.controller.ReplicationControlManagerTest.testProcessBrokerHeartbeatInControlledShutdown(MetadataVersion)[1] PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 50 > ReplicationControlManagerTest > testProcessBrokerHeartbeatInControlledShutdown(MetadataVersion) > org.apache.kafka.controller.ReplicationControlManagerTest.testProcessBrokerHeartbeatInControlledShutdown(MetadataVersion)[2] PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 50 > ReplicationControlManagerTest > testCreateTopicsISRInvariants() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 50 > FeaturesImageTest > testEmptyImageRoundTrip() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 50 > FeaturesImageTest > testApplyDelta1() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 50 > FeaturesImageTest > testImage2RoundTrip() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 50 > FeaturesImageTest > testImage1RoundTrip() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 50 > BrokerStateTest > testUnknownValues() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 50 > BrokerStateTest > testFromValue() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 50 > StandardAclRecordIteratorTest > testIteration() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 50 > StandardAclRecordIteratorTest > testNoSuchElementException() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 44 > QuorumControllerTest > testFenceMultipleBrokers() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 50 > BatchFileWriterReaderTest > testHeaderFooter() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 50 > TimelineHashSetTest > testToArray() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 50 > TimelineHashSetTest > testIteration() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 50 > TimelineHashSetTest > testSetMethods() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 50 > TimelineHashSetTest > testNullsForbidden() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 50 > TimelineHashSetTest > testEmptySet() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 43 > StandardAuthorizerTest > testAllowAuditLogging(boolean) > org.apache.kafka.metadata.authorizer.StandardAuthorizerTest.testAllowAuditLogging(boolean)[1] PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 43 > StandardAuthorizerTest > testAllowAuditLogging(boolean) > org.apache.kafka.metadata.authorizer.StandardAuthorizerTest.testAllowAuditLogging(boolean)[2] PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 43 > StandardAuthorizerTest > testGetDefaultResult() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 43 > StandardAuthorizerTest > testStartWithEarlyStartListeners() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 43 > StandardAuthorizerTest > testDenyAuditLogging(boolean) > org.apache.kafka.metadata.authorizer.StandardAuthorizerTest.testDenyAuditLogging(boolean)[1] PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 43 > StandardAuthorizerTest > testDenyAuditLogging(boolean) > org.apache.kafka.metadata.authorizer.StandardAuthorizerTest.testDenyAuditLogging(boolean)[2] PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 43 > StandardAuthorizerTest > testTopicAclWithOperationAll() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 43 > StandardAuthorizerTest > testDenyPrecedenceWithOperationAll() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 43 > StandardAuthorizerTest > testConfigure() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 43 > StandardAuthorizerTest > testAuthorizationPriorToCompleteInitialLoad() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 43 > StandardAuthorizerTest > testHostAddressAclValidation() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 43 > StandardAuthorizerTest > testCompleteInitialLoad() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 43 > StandardAuthorizerTest > testCompleteInitialLoadWithException() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 43 > StandardAuthorizerTest > testFindResultImplication() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 43 > StandardAuthorizerTest > testGetConfiguredSuperUsers() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 43 > StandardAuthorizerTest > testSimpleAuthorizations() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 43 > StandardAuthorizerTest > testListAcls() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 43 > ClusterControlManagerTest > testRegistrationWithUnsupportedMetadataVersion() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 43 > ClusterControlManagerTest > testUnregister() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 43 > ClusterControlManagerTest > testReplayRegisterBrokerRecord() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 43 > ClusterControlManagerTest > testReplayBrokerRegistrationChangeRecord() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 43 > ClusterControlManagerTest > testRegisterBrokerRecordVersion(MetadataVersion) > org.apache.kafka.controller.ClusterControlManagerTest.testRegisterBrokerRecordVersion(MetadataVersion)[1] PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 43 > ClusterControlManagerTest > testRegisterBrokerRecordVersion(MetadataVersion) > org.apache.kafka.controller.ClusterControlManagerTest.testRegisterBrokerRecordVersion(MetadataVersion)[2] PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 43 > ClusterControlManagerTest > testPlaceReplicas(int) > org.apache.kafka.controller.ClusterControlManagerTest.testPlaceReplicas(int)[1] PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 43 > ClusterControlManagerTest > testPlaceReplicas(int) > org.apache.kafka.controller.ClusterControlManagerTest.testPlaceReplicas(int)[2] PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 43 > ClusterControlManagerTest > testReplay(MetadataVersion) > org.apache.kafka.controller.ClusterControlManagerTest.testReplay(MetadataVersion)[1] PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 43 > ClusterControlManagerTest > testReplay(MetadataVersion) > org.apache.kafka.controller.ClusterControlManagerTest.testReplay(MetadataVersion)[2] PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 43 > ClusterControlManagerTest > testIterator(MetadataVersion) > org.apache.kafka.controller.ClusterControlManagerTest.testIterator(MetadataVersion)[1] PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 43 > ClusterControlManagerTest > testIterator(MetadataVersion) > org.apache.kafka.controller.ClusterControlManagerTest.testIterator(MetadataVersion)[2] PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 43 > ClusterControlManagerTest > testRegistrationWithIncorrectClusterId() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 43 > FeatureControlManagerTest > testCanotDowngradeBefore3_3_IV0() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 43 > FeatureControlManagerTest > testFeatureControlIterator() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 43 > FeatureControlManagerTest > testUpdateFeatures() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 43 > FeatureControlManagerTest > testCanUseUnsafeDowngradeIfMetadataChanged() SKIPPED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 43 > FeatureControlManagerTest > testApplyMetadataVersionChangeRecord() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 43 > FeatureControlManagerTest > testUpdateFeaturesErrorCases() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 43 > FeatureControlManagerTest > testCanUseSafeDowngradeIfMetadataDidNotChange() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 43 > FeatureControlManagerTest > testUnsafeDowngradeIsTemporarilyDisabled() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 43 > FeatureControlManagerTest > testCanUpgradeToHigherVersion() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 43 > FeatureControlManagerTest > testCannotDowngradeToVersionBeforeMinimumSupportedKraftVersion() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 43 > FeatureControlManagerTest > testCannotUnsafeDowngradeToHigherVersion() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 43 > FeatureControlManagerTest > testCannotUseSafeDowngradeIfMetadataChanged() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 43 > FeatureControlManagerTest > testCreateFeatureLevelRecords() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 43 > FeatureControlManagerTest > testReplay() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 43 > FeatureControlManagerTest > testCannotUpgradeToLowerVersion() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 43 > FeatureControlManagerTest > testCannotDowngradeToHigherVersion() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 43 > ResultOrErrorTest > testError() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 43 > ResultOrErrorTest > testEquals() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 43 > ResultOrErrorTest > testResult() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 43 > MetadataImageTest > testEmptyImageRoundTrip() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 43 > MetadataImageTest > testApplyDelta1() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 43 > MetadataImageTest > testImage2RoundTrip() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 43 > MetadataImageTest > testImage1RoundTrip() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 43 > ConfigSynonymTest > testHoursToMilliseconds() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 43 > ConfigSynonymTest > testMinutesToMilliseconds() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 43 > ReplicasTest > testCopyWithout2() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 43 > ReplicasTest > testValidateIsr() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 43 > ReplicasTest > testToArray() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 43 > ReplicasTest > testClone() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 43 > ReplicasTest > testToSet() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 43 > ReplicasTest > testValidate() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 43 > ReplicasTest > testCopyWithout() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 43 > ReplicasTest > testContains() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 43 > ReplicasTest > testCopyWith() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 43 > ReplicasTest > testContains2() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 43 > ReplicasTest > testToList() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 43 > StandardAclTest > testToBindingRoundTrips() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 43 > StandardAclTest > testCompareTo() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 43 > StandardAclTest > testEquals() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 43 > TimelineIntegerTest > testModifyValue() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 43 > TimelineIntegerTest > testReset() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 43 > TimelineIntegerTest > testSnapshot() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 43 > TimelineIntegerTest > testToStringAndEquals() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 44 > QuorumControllerTest > testBalancePartitionLeaders() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 44 > QuorumControllerTest > testSnapshotSaveAndLoad() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 44 > QuorumControllerTest > testFatalMetadataReplayErrorOnActive() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 44 > QuorumControllerTest > testAppendRecordsAtomically() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 44 > QuorumControllerTest > testNoOpRecordWriteAfterTimeout() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 44 > QuorumControllerTest > testUnregisterBroker() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 44 > QuorumControllerTest > testConfigResourceExistenceChecker() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 44 > QuorumControllerTest > testEarlyControllerResults() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 44 > QuorumControllerTest > testQuorumControllerCompletesAuthorizerInitialLoad() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 44 > QuorumControllerTest > testDelayedConfigurationOperations() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 44 > QuorumControllerTest > testConfigurationOperations() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 44 > QuorumControllerTest > testMissingInMemorySnapshot() SKIPPED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 44 > AclsDeltaTest > testThrowsExceptionOnInvalidStateWhenImageIsEmpty() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 44 > AclsDeltaTest > testKeepsDeleteIfInImage() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 44 > AclsDeltaTest > testRemovesDeleteIfNotInImage() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 44 > AclsDeltaTest > testThrowsExceptionOnInvalidStateWhenImageHasOtherAcls() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 44 > ProducerIdsImageTest > testEmptyImageRoundTrip() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 44 > ProducerIdsImageTest > testApplyDelta1() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 44 > ProducerIdsImageTest > testImage2RoundTrip() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 44 > ProducerIdsImageTest > testImage1RoundTrip() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 44 > LeaderRecoveryStateTest > testDoesNotContainNoChange() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 44 > LeaderRecoveryStateTest > testByteToLeaderRecoveryState() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 44 > LeaderRecoveryStateTest > testLeaderRecoveryStateValue() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 44 > LeaderRecoveryStateTest > testOptionalInvalidValue() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 44 > LeaderRecoveryStateTest > testUniqueValues() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 44 > LeaderRecoveryStateTest > testInvalidValue() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 44 > LeaderRecoveryStateTest > testChangeTo() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 44 > BaseHashTableTest > testInsertAndRemove() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 44 > BaseHashTableTest > testEmptyTable() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 44 > BaseHashTableTest > testFindSlot() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 44 > BaseHashTableTest > testExpectedSizeToCapacity() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 44 > BaseHashTableTest > testExpansion() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 44 > BaseHashTableTest > testHashCollisons() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 44 > TimelineObjectTest > testModifyValue() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 44 > TimelineObjectTest > testReset() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 44 > TimelineObjectTest > testSnapshot() PASSED
+
+Gradle Test Run :metadata:test > Gradle Test Executor 44 > TimelineObjectTest > testToStringAndEquals() PASSED
+
+> Task :metadata:test FAILED
+30 actionable tasks: 1 executed, 29 up-to-date
