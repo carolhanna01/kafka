@@ -1,0 +1,178 @@
+rss:
+  '@version': '0.92'
+  channel:
+    build-info:
+      build-date: 22-06-2022
+      build-number: '820010'
+      version: 8.20.10
+    description: This file is an XML representation of an issue
+    item:
+      assignee:
+        '#text': Jason Gustafson
+        '@username': hachikuji
+      attachments: null
+      comments:
+        comment:
+        - '#text': "<p>hachikuji commented on pull request #8451: <a href=\"https://issues.apache.org/jira/browse/KAFKA-9835\"\
+            \ title=\"Race condition with concurrent write allows reads above high\
+            \ watermark\" class=\"issue-link\" data-issue-key=\"KAFKA-9835\"><del>KAFKA-9835</del></a>;\
+            \ Protect `FileRecords.slice` from concurrent write<br/>\nURL: <a href=\"\
+            https://github.com/apache/kafka/pull/8451\" class=\"external-link\" target=\"\
+            _blank\" rel=\"nofollow noopener\">https://github.com/apache/kafka/pull/8451</a></p>\n\
+            \n\n<p>   If the size of a log changes due to a concurrent write while\
+            \ accessing `FileRecords.slice`, then we may exceed the requested size.\
+            \ In particular, this would allow a read above the high watermark.</p>\n\
+            \n<ol>\n\t<li>\n\t<ol>\n\t\t<li>\n\t\t<ol>\n\t\t\t<li>Committer Checklist\
+            \ (excluded from commit message)</li>\n\t\t</ol>\n\t\t</li>\n\t</ol>\n\
+            \t</li>\n</ol>\n<ul class=\"alternate\" type=\"square\">\n\t<li>[ ] Verify\
+            \ design and implementation</li>\n\t<li>[ ] Verify test coverage and CI\
+            \ build status</li>\n\t<li>[ ] Verify documentation (including upgrade\
+            \ notes)</li>\n</ul>\n\n\n\n<p>----------------------------------------------------------------<br/>\n\
+            This is an automated message from the Apache Git Service.<br/>\nTo respond\
+            \ to the message, please log on to GitHub and use the<br/>\nURL above\
+            \ to go to the specific comment.</p>\n\n<p>For queries about this service,\
+            \ please contact Infrastructure at:<br/>\nusers@infra.apache.org</p>"
+          '@author': githubbot
+          '@created': Wed, 8 Apr 2020 16:02:12 +0000
+          '@id': '17078424'
+        - '#text': '<p>hachikuji commented on pull request #8451: <a href="https://issues.apache.org/jira/browse/KAFKA-9835"
+            title="Race condition with concurrent write allows reads above high watermark"
+            class="issue-link" data-issue-key="KAFKA-9835"><del>KAFKA-9835</del></a>;
+            Protect `FileRecords.slice` from concurrent write<br/>
+
+            URL: <a href="https://github.com/apache/kafka/pull/8451" class="external-link"
+            target="_blank" rel="nofollow noopener">https://github.com/apache/kafka/pull/8451</a></p>
+
+
+
+
+
+            <p>----------------------------------------------------------------<br/>
+
+            This is an automated message from the Apache Git Service.<br/>
+
+            To respond to the message, please log on to GitHub and use the<br/>
+
+            URL above to go to the specific comment.</p>
+
+
+            <p>For queries about this service, please contact Infrastructure at:<br/>
+
+            users@infra.apache.org</p>'
+          '@author': githubbot
+          '@created': Wed, 8 Apr 2020 18:31:32 +0000
+          '@id': '17078576'
+      created: Wed, 8 Apr 2020 06:47:49 +0000
+      customfields:
+        customfield:
+        - '@id': customfield_12310310
+          '@key': com.atlassian.jira.toolkit:attachments
+          customfieldname: Attachment count
+          customfieldvalues:
+            customfieldvalue: '0.0'
+        - '@id': customfield_12314020
+          '@key': com.atlassian.jira.plugins.jira-development-integration-plugin:devsummary
+          customfieldname: Development
+          customfieldvalues: null
+        - '@id': customfield_12313422
+          '@key': com.atlassian.jirafisheyeplugin:jobcheckbox
+          customfieldname: Enable Automatic Patch Review
+          customfieldvalues:
+            customfieldvalue: 'false'
+        - '@id': customfield_12310420
+          '@key': com.pyxis.greenhopper.jira:gh-global-rank
+          customfieldname: Global Rank
+          customfieldvalues:
+            customfieldvalue: '9223372036854775807'
+        - '@id': customfield_12312521
+          '@key': com.atlassian.jira.toolkit:LastCommentDate
+          customfieldname: Last public comment date
+          customfieldvalues: 5 years, 5 weeks, 1 day ago
+        - '@id': customfield_12311820
+          '@key': com.pyxis.greenhopper.jira:gh-lexo-rank
+          customfieldname: Rank
+          customfieldvalues:
+            customfieldvalue: '0|z0de88:'
+        - '@id': customfield_12310920
+          '@key': com.pyxis.greenhopper.jira:gh-global-rank
+          customfieldname: Rank (Obsolete)
+          customfieldvalues:
+            customfieldvalue: '9223372036854775807'
+      description: "<p>Kafka's log implementation serializes all writes using a lock,\
+        \ but allows multiple concurrent reads while that lock is held. The `FileRecords`\
+        \ class contains the core implementation. Reads to the log create logical\
+        \ slices of `FileRecords` which are then passed to the network layer for sending.\
+        \ An abridged version of the implementation of `slice` is provided below:</p>\n\
+        \n<div class=\"code panel\" style=\"border-width: 1px;\"><div class=\"codeContent\
+        \ panelContent\">\n<pre class=\"code-java\">\n    <span class=\"code-keyword\"\
+        >public</span> FileRecords slice(<span class=\"code-object\">int</span> position,\
+        \ <span class=\"code-object\">int</span> size) <span class=\"code-keyword\"\
+        >throws</span> IOException {\n        <span class=\"code-object\">int</span>\
+        \ end = <span class=\"code-keyword\">this</span>.start + position + size;\n\
+        \        <span class=\"code-comment\">// handle integer overflow or <span\
+        \ class=\"code-keyword\">if</span> end is beyond the end of the file\n</span>\
+        \        <span class=\"code-keyword\">if</span> (end &lt; 0 || end &gt;= start\
+        \ + sizeInBytes())\n            end = start + sizeInBytes();\n        <span\
+        \ class=\"code-keyword\">return</span> <span class=\"code-keyword\">new</span>\
+        \ FileRecords(file, channel, <span class=\"code-keyword\">this</span>.start\
+        \ + position, end, <span class=\"code-keyword\">true</span>);\n    }\n</pre>\n\
+        </div></div>\n\n<p>The `size` parameter here is typically derived from the\
+        \ fetch size, but is upper-bounded with respect to the high watermark. The\
+        \ two calls to `sizeInBytes` here are problematic because the size of the\
+        \ file may change in between them. Specifically a concurrent write may increase\
+        \ the size of the file after the first call to `sizeInBytes` but before the\
+        \ second one. In the worst case, when `size` defines the limit of the high\
+        \ watermark, this can lead to a slice containing uncommitted data.</p>"
+      due: null
+      environment: null
+      fixVersion:
+      - 2.4.2
+      - 2.5.1
+      key:
+        '#text': KAFKA-9835
+        '@id': '13296992'
+      labels: null
+      link: https://issues.apache.org/jira/browse/KAFKA-9835
+      priority:
+        '#text': Major
+        '@iconUrl': https://issues.apache.org/jira/images/icons/priorities/major.svg
+        '@id': '3'
+      project:
+        '#text': Kafka
+        '@id': '12311720'
+        '@key': KAFKA
+      reporter:
+        '#text': Jason Gustafson
+        '@username': hachikuji
+      resolution:
+        '#text': Fixed
+        '@id': '1'
+      resolved: Wed, 8 Apr 2020 18:43:23 +0000
+      status:
+        '#text': Resolved
+        '@description': A resolution has been taken, and it is awaiting verification
+          by reporter. From here issues are either reopened, or are closed.
+        '@iconUrl': https://issues.apache.org/jira/images/icons/statuses/resolved.png
+        '@id': '5'
+      statusCategory:
+        '@colorName': green
+        '@id': '3'
+        '@key': done
+      subtasks: null
+      summary: Race condition with concurrent write allows reads above high watermark
+      title: '[KAFKA-9835] Race condition with concurrent write allows reads above
+        high watermark'
+      type:
+        '#text': Bug
+        '@iconUrl': https://issues.apache.org/jira/secure/viewavatar?size=xsmall&avatarId=21133&avatarType=issuetype
+        '@id': '1'
+      updated: Wed, 8 Apr 2020 19:14:24 +0000
+      version:
+      - 2.2.0
+      - 2.3.0
+      - 2.4.0
+      votes: '0'
+      watches: '5'
+    language: en-uk
+    link: https://issues.apache.org/jira
+    title: ASF JIRA
