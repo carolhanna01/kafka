@@ -1,0 +1,203 @@
+rss:
+  '@version': '0.92'
+  channel:
+    build-info:
+      build-date: 22-06-2022
+      build-number: '820010'
+      version: 8.20.10
+    description: This file is an XML representation of an issue
+    item:
+      assignee:
+        '#text': Unassigned
+        '@username': '-1'
+      attachments: null
+      comments:
+        comment:
+        - '#text': '<p>Here is a PR to fix this: <a href="https://github.com/apache/kafka/pull/5241"
+            class="external-link" target="_blank" rel="nofollow noopener">https://github.com/apache/kafka/pull/5241</a></p>'
+          '@author': rayokota
+          '@created': Sun, 17 Jun 2018 07:19:39 +0000
+          '@id': '16515017'
+        - '#text': '<p>Issue resolved by pull request 5241<br/>
+
+            <a href="https://github.com/apache/kafka/pull/5241" class="external-link"
+            target="_blank" rel="nofollow noopener">https://github.com/apache/kafka/pull/5241</a></p>'
+          '@author': ewencp
+          '@created': Sun, 17 Jun 2018 19:13:04 +0000
+          '@id': '16515190'
+        - '#text': "<p>ewencp closed pull request #5241: <a href=\"https://issues.apache.org/jira/browse/KAFKA-7068\"\
+            \ title=\"ConfigTransformer doesn&#39;t handle null values\" class=\"\
+            issue-link\" data-issue-key=\"KAFKA-7068\"><del>KAFKA-7068</del></a> :\
+            \ KIP-297 : Handle null config values during transform<br/>\nURL: <a href=\"\
+            https://github.com/apache/kafka/pull/5241\" class=\"external-link\" target=\"\
+            _blank\" rel=\"nofollow noopener\">https://github.com/apache/kafka/pull/5241</a></p>\n\
+            \n\n\n\n<p>This is a PR merged from a forked repository.<br/>\nAs GitHub\
+            \ hides the original diff on merge, it is displayed below for<br/>\nthe\
+            \ sake of provenance:</p>\n\n<p>As this is a foreign pull request (from\
+            \ a fork), the diff is supplied<br/>\nbelow (as it won't show otherwise\
+            \ due to GitHub magic):</p>\n\n<p>diff --git a/clients/src/main/java/org/apache/kafka/common/config/ConfigTransformer.java\
+            \ b/clients/src/main/java/org/apache/kafka/common/config/ConfigTransformer.java<br/>\n\
+            index 7c3c516b073..c727230e137 100644<br/>\n&#8212; a/clients/src/main/java/org/apache/kafka/common/config/ConfigTransformer.java<br/>\n\
+            +++ b/clients/src/main/java/org/apache/kafka/common/config/ConfigTransformer.java<br/>\n\
+            @@ -77,11 +77,13 @@ public ConfigTransformerResult transform(Map&lt;String,\
+            \ String&gt; configs) {</p>\n\n<p>         // Collect the variables from\
+            \ the given configs that need transformation<br/>\n         for (Map.Entry&lt;String,\
+            \ String&gt; config : configs.entrySet()) {</p>\n<ul class=\"alternate\"\
+            \ type=\"square\">\n\t<li>List&lt;ConfigVariable&gt; vars = getVars(config.getKey(),\
+            \ config.getValue(), DEFAULT_PATTERN);</li>\n\t<li>for (ConfigVariable\
+            \ var : vars) {</li>\n\t<li>Map&lt;String, Set&lt;String&gt;&gt; keysByPath\
+            \ = keysByProvider.computeIfAbsent(var.providerName, k -&gt; new HashMap&lt;&gt;());</li>\n\
+            \t<li>Set&lt;String&gt; keys = keysByPath.computeIfAbsent(var.path, k\
+            \ -&gt; new HashSet&lt;&gt;());</li>\n\t<li>keys.add(var.variable);<br/>\n\
+            +            if (config.getValue() != null) \n<div class=\"error\"><span\
+            \ class=\"error\">Unknown macro: {+                List&lt;ConfigVariable&gt;\
+            \ vars = getVars(config.getKey(), config.getValue(), DEFAULT_PATTERN);+\
+            \                for (ConfigVariable var }</span> </div>\n<p>        \
+            \ }</p></li>\n</ul>\n\n\n<p>@@ -128,6 +130,9 @@ public ConfigTransformerResult\
+            \ transform(Map&lt;String, String&gt; configs) {<br/>\n     private static\
+            \ String replace(Map&lt;String, Map&lt;String, Map&lt;String, String&gt;&gt;&gt;\
+            \ lookupsByProvider,<br/>\n                                   String value,<br/>\n\
+            \                                   Pattern pattern) {<br/>\n+       \
+            \ if (value == null) </p>\n{\n+            return null;\n+        }\n\
+            <p>         Matcher matcher = pattern.matcher(value);<br/>\n         StringBuilder\
+            \ builder = new StringBuilder();<br/>\n         int i = 0;<br/>\ndiff\
+            \ --git a/clients/src/test/java/org/apache/kafka/common/config/ConfigTransformerTest.java\
+            \ b/clients/src/test/java/org/apache/kafka/common/config/ConfigTransformerTest.java<br/>\n\
+            index 7bc74f36e9b..ebc401180f2 100644<br/>\n&#8212; a/clients/src/test/java/org/apache/kafka/common/config/ConfigTransformerTest.java<br/>\n\
+            +++ b/clients/src/test/java/org/apache/kafka/common/config/ConfigTransformerTest.java<br/>\n\
+            @@ -25,6 +25,7 @@<br/>\n import java.util.Set;</p>\n\n<p> import static\
+            \ org.junit.Assert.assertEquals;<br/>\n+import static org.junit.Assert.assertNull;<br/>\n\
+            \ import static org.junit.Assert.assertTrue;</p>\n\n<p> public class ConfigTransformerTest\
+            \ {<br/>\n@@ -36,6 +37,7 @@<br/>\n     public static final String TEST_PATH\
+            \ = \"testPath\";<br/>\n     public static final String TEST_RESULT =\
+            \ \"testResult\";<br/>\n     public static final String TEST_RESULT_WITH_TTL\
+            \ = \"testResultWithTTL\";<br/>\n+    public static final String TEST_RESULT_NO_PATH\
+            \ = \"testResultNoPath\";</p>\n\n<p>     private ConfigTransformer configTransformer;</p>\n\
+            \n<p>@@ -83,6 +85,24 @@ public void testSingleLevelOfIndirection() throws\
+            \ Exception {<br/>\n         assertEquals(\"${test:testPath:testResult}\"\
+            , data.get(MY_KEY));<br/>\n     }</p>\n\n<p>+    @Test<br/>\n+    public\
+            \ void testReplaceVariableNoPath() throws Exception {<br/>\n+        ConfigTransformerResult\
+            \ result = configTransformer.transform(Collections.singletonMap(MY_KEY,\
+            \ \"${test:testKey}\"));<br/>\n+        Map&lt;String, String&gt; data\
+            \ = result.data();<br/>\n+        Map&lt;String, Long&gt; ttls = result.ttls();<br/>\n\
+            +        assertEquals(TEST_RESULT_NO_PATH, data.get(MY_KEY));<br/>\n+\
+            \        assertTrue(ttls.isEmpty());<br/>\n+    }<br/>\n+<br/>\n+    @Test<br/>\n\
+            +    public void testNullConfigValue() throws Exception </p>\n{\n+   \
+            \     ConfigTransformerResult result = configTransformer.transform(Collections.singletonMap(MY_KEY,\
+            \ null));\n+        Map&lt;String, String&gt; data = result.data();\n\
+            +        Map&lt;String, Long&gt; ttls = result.ttls();\n+        assertNull(data.get(MY_KEY));\n\
+            +        assertTrue(ttls.isEmpty());\n+    }\n<p>+<br/>\n     public static\
+            \ class TestConfigProvider implements ConfigProvider {</p>\n\n<p>    \
+            \     public void configure(Map&lt;String, ?&gt; configs) {<br/>\n@@ -95,7\
+            \ +115,7 @@ public ConfigData get(String path) {<br/>\n         public\
+            \ ConfigData get(String path, Set&lt;String&gt; keys) {<br/>\n       \
+            \      Map&lt;String, String&gt; data = new HashMap&lt;&gt;();<br/>\n\
+            \             Long ttl = null;</p>\n<ul class=\"alternate\" type=\"square\"\
+            >\n\t<li>if (path.equals(TEST_PATH)) {<br/>\n+            if (TEST_PATH.equals(path))\
+            \ {<br/>\n                 if (keys.contains(TEST_KEY)) \n{\n        \
+            \             data.put(TEST_KEY, TEST_RESULT);\n                 }\n<p>@@\
+            \ -106,6 +126,10 @@ public ConfigData get(String path, Set&lt;String&gt;\
+            \ keys) {<br/>\n                 if (keys.contains(TEST_INDIRECTION))\
+            \ {<br/>\n                     data.put(TEST_INDIRECTION, \"${test:testPath:testResult}\"\
+            );<br/>\n                 }<br/>\n+            } else </p>\n<div class=\"\
+            error\"><span class=\"error\">Unknown macro: {+                if (keys.contains(TEST_KEY))\
+            \ {\n+                    data.put(TEST_KEY, TEST_RESULT_NO_PATH);\n+\
+            \                }             }</span> </div>\n<p>             return\
+            \ new ConfigData(data, ttl);<br/>\n         }</p></li>\n</ul>\n\n\n\n\n\
+            \n<p>----------------------------------------------------------------<br/>\n\
+            This is an automated message from the Apache Git Service.<br/>\nTo respond\
+            \ to the message, please log on GitHub and use the<br/>\nURL above to\
+            \ go to the specific comment.</p>\n\n<p>For queries about this service,\
+            \ please contact Infrastructure at:<br/>\nusers@infra.apache.org</p>"
+          '@author': githubbot
+          '@created': Sun, 17 Jun 2018 19:15:05 +0000
+          '@id': '16515191'
+      component: connect
+      created: Sun, 17 Jun 2018 07:12:21 +0000
+      customfields:
+        customfield:
+        - '@id': customfield_12310310
+          '@key': com.atlassian.jira.toolkit:attachments
+          customfieldname: Attachment count
+          customfieldvalues:
+            customfieldvalue: '0.0'
+        - '@id': customfield_12314020
+          '@key': com.atlassian.jira.plugins.jira-development-integration-plugin:devsummary
+          customfieldname: Development
+          customfieldvalues: null
+        - '@id': customfield_12313422
+          '@key': com.atlassian.jirafisheyeplugin:jobcheckbox
+          customfieldname: Enable Automatic Patch Review
+          customfieldvalues:
+            customfieldvalue: 'false'
+        - '@id': customfield_12310420
+          '@key': com.pyxis.greenhopper.jira:gh-global-rank
+          customfieldname: Global Rank
+          customfieldvalues:
+            customfieldvalue: '9223372036854775807'
+        - '@id': customfield_12312521
+          '@key': com.atlassian.jira.toolkit:LastCommentDate
+          customfieldname: Last public comment date
+          customfieldvalues: 6 years, 47 weeks, 4 days ago
+        - '@id': customfield_12311820
+          '@key': com.pyxis.greenhopper.jira:gh-lexo-rank
+          customfieldname: Rank
+          customfieldvalues:
+            customfieldvalue: '0|i3uyan:'
+        - '@id': customfield_12310920
+          '@key': com.pyxis.greenhopper.jira:gh-global-rank
+          customfieldname: Rank (Obsolete)
+          customfieldvalues:
+            customfieldvalue: '9223372036854775807'
+      description: <p>ConfigTransformer fails with NPE when the input configs have
+        keys with null values. This is a blocker for 2.0.0 since connectors configs
+        can have null values.</p>
+      due: null
+      environment: null
+      fixVersion:
+      - 2.0.0
+      - 2.1.0
+      key:
+        '#text': KAFKA-7068
+        '@id': '13166586'
+      labels: null
+      link: https://issues.apache.org/jira/browse/KAFKA-7068
+      priority:
+        '#text': Blocker
+        '@iconUrl': https://issues.apache.org/jira/images/icons/priorities/blocker.svg
+        '@id': '1'
+      project:
+        '#text': Kafka
+        '@id': '12311720'
+        '@key': KAFKA
+      reporter:
+        '#text': Magesh kumar Nandakumar
+        '@username': mageshn
+      resolution:
+        '#text': Fixed
+        '@id': '1'
+      resolved: Sun, 17 Jun 2018 19:13:04 +0000
+      status:
+        '#text': Resolved
+        '@description': A resolution has been taken, and it is awaiting verification
+          by reporter. From here issues are either reopened, or are closed.
+        '@iconUrl': https://issues.apache.org/jira/images/icons/statuses/resolved.png
+        '@id': '5'
+      statusCategory:
+        '@colorName': green
+        '@id': '3'
+        '@key': done
+      subtasks: null
+      summary: ConfigTransformer doesn't handle null values
+      title: '[KAFKA-7068] ConfigTransformer doesn''t handle null values'
+      type:
+        '#text': Bug
+        '@iconUrl': https://issues.apache.org/jira/secure/viewavatar?size=xsmall&avatarId=21133&avatarType=issuetype
+        '@id': '1'
+      updated: Sun, 17 Jun 2018 19:15:05 +0000
+      version: 2.0.0
+      votes: '0'
+      watches: '3'
+    language: en-uk
+    link: https://issues.apache.org/jira
+    title: ASF JIRA
