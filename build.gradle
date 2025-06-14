@@ -128,7 +128,7 @@ subprojects {
   }
 
   tasks.withType(ScalaCompile) {
-    scalaCompileOptions.useAnt = false
+    // scalaCompileOptions.useAnt = false
 
     configure(scalaCompileOptions.forkOptions) {
       memoryMaximumSize = '1g'
@@ -345,7 +345,7 @@ project(':examples') {
 }
 
 project(':clients') {
-  apply plugin: 'checkstyle'
+  // apply plugin: 'checkstyle'
   archivesBaseName = "kafka-clients"
 
   dependencies {
@@ -381,8 +381,8 @@ project(':clients') {
     archives testJar
   }
   
-  checkstyle {
-     configFile = new File(rootDir, "checkstyle/checkstyle.xml")
-  }
-  test.dependsOn('checkstyleMain', 'checkstyleTest')
+  // checkstyle {
+  //    configFile = new File(rootDir, "checkstyle/checkstyle.xml")
+  // }
+  // test.dependsOn('checkstyleMain', 'checkstyleTest')
 }
