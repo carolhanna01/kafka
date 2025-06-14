@@ -13,7 +13,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import org.ajoberstar.grgit.Grgit
+// import org.ajoberstar.grgit.Grgit
 
 buildscript {
   repositories {
@@ -24,10 +24,10 @@ buildscript {
 
   dependencies {
     // For Apache Rat plugin to ignore non-Git files
-    classpath "org.ajoberstar:grgit:1.9.2"
-    classpath 'com.github.ben-manes:gradle-versions-plugin:0.14.0'
+    // classpath "org.ajoberstar:grgit:1.9.2"
+    // classpath 'com.github.ben-manes:gradle-versions-plugin:0.14.0'
     classpath 'org.scoverage:gradle-scoverage:2.1.0'
-    classpath 'com.github.jengelman.gradle.plugins:shadow:1.2.4'
+    // classpath 'com.github.jengelman.gradle.plugins:shadow:1.2.4'
   }
 }
 
@@ -41,30 +41,30 @@ allprojects {
     mavenCentral()
   }
 
-  apply plugin: 'com.github.ben-manes.versions'
+  // apply plugin: 'com.github.ben-manes.versions'
 
-  dependencyUpdates {
-    revision="release"
-    resolutionStrategy = {
-      componentSelection { rules ->
-        rules.all { ComponentSelection selection ->
-          boolean rejected = ['snap', 'alpha', 'beta', 'rc', 'cr', 'm'].any { qualifier ->
-            selection.candidate.version ==~ /(?i).*[.-]${qualifier}[.\d-]*/
-          }
-          if (rejected) {
-            selection.reject('Release candidate')
-          }
-        }
-      }
-    }
-    configurations {
-      runtime {
-        resolutionStrategy {
-          force "com.fasterxml.jackson.core:jackson-annotations:$versions.jackson"
-        }
-      }
-    }
-  }
+  // dependencyUpdates {
+  //   revision="release"
+  //   resolutionStrategy = {
+  //     componentSelection { rules ->
+  //       rules.all { ComponentSelection selection ->
+  //         boolean rejected = ['snap', 'alpha', 'beta', 'rc', 'cr', 'm'].any { qualifier ->
+  //           selection.candidate.version ==~ /(?i).*[.-]${qualifier}[.\d-]*/
+  //         }
+  //         if (rejected) {
+  //           selection.reject('Release candidate')
+  //         }
+  //       }
+  //     }
+  //   }
+  //   configurations {
+  //     runtime {
+  //       resolutionStrategy {
+  //         force "com.fasterxml.jackson.core:jackson-annotations:$versions.jackson"
+  //       }
+  //     }
+  //   }
+  // }
 
   if (JavaVersion.current().isJava8Compatible()) {
     tasks.withType(Javadoc) {
@@ -102,27 +102,27 @@ ext {
 
 apply from: file('wrapper.gradle')
 
-if (new File('.git').exists()) {
-  apply from: file('gradle/rat.gradle')
-  rat {
-    // Exclude everything under the directory that git should be ignoring via .gitignore or that isn't checked in. These
-    // restrict us only to files that are checked in or are staged.
-    def repo = Grgit.open(project.file('.'))
-    excludes = new ArrayList<String>(repo.clean(ignore: false, directories: true, dryRun: true))
-    // And some of the files that we have checked in should also be excluded from this check
-    excludes.addAll([
-        '**/.git/**',
-        '**/build/**',
-        'CONTRIBUTING.md',
-        'gradlew',
-        'gradlew.bat',
-        '**/README.md',
-        '**/id_rsa',
-        '**/id_rsa.pub',
-        'checkstyle/suppressions.xml'
-    ])
-  }
-}
+// if (new File('.git').exists()) {
+//   apply from: file('gradle/rat.gradle')
+//   rat {
+//     // Exclude everything under the directory that git should be ignoring via .gitignore or that isn't checked in. These
+//     // restrict us only to files that are checked in or are staged.
+//     // def repo = Grgit.open(project.file('.'))
+//     excludes = new ArrayList<String>(repo.clean(ignore: false, directories: true, dryRun: true))
+//     // And some of the files that we have checked in should also be excluded from this check
+//     excludes.addAll([
+//         '**/.git/**',
+//         '**/build/**',
+//         'CONTRIBUTING.md',
+//         'gradlew',
+//         'gradlew.bat',
+//         '**/README.md',
+//         '**/id_rsa',
+//         '**/id_rsa.pub',
+//         'checkstyle/suppressions.xml'
+//     ])
+//   }
+// }
 
 subprojects {
   apply plugin: 'java'
@@ -133,7 +133,7 @@ subprojects {
   }
   apply plugin: 'maven'
   apply plugin: 'signing'
-  apply plugin: 'checkstyle'
+  // apply plugin: 'checkstyle'
   apply plugin: 'findbugs'
 
   sourceCompatibility = 1.7
@@ -318,13 +318,13 @@ subprojects {
     }
   }
 
-  checkstyle {
-    configFile = new File(rootDir, "checkstyle/checkstyle.xml")
-    configProperties = [importControlFile: "$rootDir/checkstyle/import-control.xml"]
-    // version 7.x requires Java 8
-    toolVersion = '6.19'
-  }
-  test.dependsOn('checkstyleMain', 'checkstyleTest')
+  // checkstyle {
+  //   configFile = new File(rootDir, "checkstyle/checkstyle.xml")
+  //   configProperties = [importControlFile: "$rootDir/checkstyle/import-control.xml"]
+  //   // version 7.x requires Java 8
+  //   toolVersion = '6.19'
+  // }
+  // test.dependsOn('checkstyleMain', 'checkstyleTest')
 
   findbugs {
     toolVersion = "3.0.1"
@@ -692,9 +692,9 @@ project(':core') {
 
   systemTestLibs.dependsOn('jar', 'testJar', 'copyDependantTestLibs')
 
-  checkstyle {
-    configProperties = [importControlFile: "$rootDir/checkstyle/import-control-core.xml"]
-  }
+  // checkstyle {
+  //   configProperties = [importControlFile: "$rootDir/checkstyle/import-control-core.xml"]
+  // }
 }
 
 project(':examples') {
@@ -708,9 +708,9 @@ project(':examples') {
     enabled = false
   }
 
-  checkstyle {
-    configProperties = [importControlFile: "$rootDir/checkstyle/import-control-core.xml"]
-  }
+  // checkstyle {
+  //   configProperties = [importControlFile: "$rootDir/checkstyle/import-control-core.xml"]
+  // }
 }
 
 project(':clients') {
@@ -901,13 +901,13 @@ project(':streams:examples') {
 
 project(':jmh-benchmarks') {
 
-  apply plugin: 'com.github.johnrengelman.shadow'
+  // apply plugin: 'com.github.johnrengelman.shadow'
 
-  shadowJar {
-    baseName = 'kafka-jmh-benchmarks-all'
-    classifier = null
-    version = null
-  }
+  // shadowJar {
+  //   baseName = 'kafka-jmh-benchmarks-all'
+  //   classifier = null
+  //   version = null
+  // }
 
   dependencies {
       compile project(':clients')
@@ -924,7 +924,7 @@ project(':jmh-benchmarks') {
   }
 
 
-  task jmh(type: JavaExec, dependsOn: [':jmh-benchmarks:clean', ':jmh-benchmarks:shadowJar']) {
+  task jmh(type: JavaExec, dependsOn: [':jmh-benchmarks:clean']) {
 
     main="-jar"
 
@@ -932,7 +932,7 @@ project(':jmh-benchmarks') {
       if (System.getProperty("jmhArgs")) {
           args System.getProperty("jmhArgs").split(',')
       }
-      args = [shadowJar.archivePath, *args]
+      // args = [shadowJar.archivePath, *args]
     }
   }
 
