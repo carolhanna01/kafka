@@ -1,0 +1,2094 @@
+Building project 'core' with Scala version 2.10.6
+:clients:compileJava
+:clients:processResources NO-SOURCE
+:clients:classes
+:clients:compileTestJava
+:clients:processTestResources UP-TO-DATE
+:clients:testClasses
+:clients:test
+
+org.apache.kafka.clients.producer.MockProducerTest > testManualCompletion PASSED
+
+org.apache.kafka.clients.producer.MockProducerTest > testAutoCompleteMock PASSED
+
+org.apache.kafka.clients.producer.RecordSendTest > testTimeout PASSED
+
+org.apache.kafka.clients.producer.RecordSendTest > testError PASSED
+
+org.apache.kafka.clients.consumer.RoundRobinAssignorTest > testOneConsumerNoTopic PASSED
+
+org.apache.kafka.clients.producer.RecordSendTest > testBlocking PASSED
+
+org.apache.kafka.clients.consumer.RoundRobinAssignorTest > testTwoConsumersTwoTopicsSixPartitions PASSED
+
+org.apache.kafka.clients.consumer.RoundRobinAssignorTest > testOneConsumerOneTopic PASSED
+
+org.apache.kafka.clients.producer.MockProducerTest > testPartitioner PASSED
+
+org.apache.kafka.clients.consumer.RoundRobinAssignorTest > testMultipleConsumersMixedTopics PASSED
+
+org.apache.kafka.clients.consumer.RoundRobinAssignorTest > testTwoConsumersOneTopicOnePartition PASSED
+
+org.apache.kafka.clients.consumer.RoundRobinAssignorTest > testOneConsumerMultipleTopics PASSED
+
+org.apache.kafka.clients.consumer.RoundRobinAssignorTest > testOnlyAssignsPartitionsFromSubscribedTopics PASSED
+
+org.apache.kafka.clients.consumer.RoundRobinAssignorTest > testTwoConsumersOneTopicTwoPartitions PASSED
+
+org.apache.kafka.clients.consumer.RoundRobinAssignorTest > testOneConsumerNonexistentTopic PASSED
+
+org.apache.kafka.clients.consumer.ConsumerConfigTest > testDeserializerToPropertyConfig PASSED
+
+org.apache.kafka.clients.consumer.ConsumerConfigTest > testDeserializerToMapConfig PASSED
+
+org.apache.kafka.clients.consumer.MockConsumerTest > testSimpleMock PASSED
+
+org.apache.kafka.common.metrics.stats.HistogramTest > testHistogram PASSED
+
+org.apache.kafka.common.metrics.stats.HistogramTest > testConstantBinScheme PASSED
+
+org.apache.kafka.common.metrics.stats.HistogramTest > testLinearBinScheme PASSED
+
+org.apache.kafka.common.SerializeCompatibilityTopicPartitionTest > testSerializationRoundtrip PASSED
+
+org.apache.kafka.common.SerializeCompatibilityTopicPartitionTest > testTopiPartitionSerializationCompatibility PASSED
+
+org.apache.kafka.clients.producer.ProducerRecordTest > testInvalidRecords PASSED
+
+org.apache.kafka.clients.producer.ProducerRecordTest > testEqualsAndHashCode PASSED
+
+org.apache.kafka.clients.consumer.SerializeCompatibilityOffsetAndMetadataTest > testSerializationRoundtrip PASSED
+
+org.apache.kafka.clients.consumer.SerializeCompatibilityOffsetAndMetadataTest > testOffsetMetadataSerializationCompatibility PASSED
+
+org.apache.kafka.clients.ClientUtilsTest > testOnlyBadHostname PASSED
+
+org.apache.kafka.clients.ClientUtilsTest > testNoPort PASSED
+
+org.apache.kafka.clients.consumer.RangeAssignorTest > testOneConsumerNoTopic PASSED
+
+org.apache.kafka.clients.consumer.RangeAssignorTest > testTwoConsumersTwoTopicsSixPartitions PASSED
+
+org.apache.kafka.clients.consumer.RangeAssignorTest > testOneConsumerOneTopic PASSED
+
+org.apache.kafka.clients.consumer.RangeAssignorTest > testMultipleConsumersMixedTopics PASSED
+
+org.apache.kafka.clients.consumer.RangeAssignorTest > testTwoConsumersOneTopicOnePartition PASSED
+
+org.apache.kafka.clients.consumer.RangeAssignorTest > testOneConsumerMultipleTopics PASSED
+
+org.apache.kafka.clients.consumer.RangeAssignorTest > testOnlyAssignsPartitionsFromSubscribedTopics PASSED
+
+org.apache.kafka.clients.consumer.RangeAssignorTest > testTwoConsumersOneTopicTwoPartitions PASSED
+
+org.apache.kafka.clients.consumer.RangeAssignorTest > testOneConsumerNonexistentTopic PASSED
+
+org.apache.kafka.clients.consumer.internals.HeartbeatTest > testResetSession PASSED
+
+org.apache.kafka.clients.consumer.internals.HeartbeatTest > testShouldHeartbeat PASSED
+
+org.apache.kafka.clients.consumer.internals.HeartbeatTest > testTimeToNextHeartbeat PASSED
+
+org.apache.kafka.clients.consumer.internals.HeartbeatTest > testSessionTimeoutExpired PASSED
+
+org.apache.kafka.clients.consumer.internals.HeartbeatTest > testShouldNotHeartbeat PASSED
+
+org.apache.kafka.clients.consumer.internals.ConsumerNetworkClientTest > multiSend PASSED
+
+org.apache.kafka.clients.consumer.internals.ConsumerNetworkClientTest > wakeup PASSED
+
+org.apache.kafka.common.record.MemoryRecordsTest > testHasRoomForMethod[0] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[0] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[0] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[0] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[1] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[1] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[1] PASSED
+
+org.apache.kafka.common.metrics.MetricsTest > testSimpleRate PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[2] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[2] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[2] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[3] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[3] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[3] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[4] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[4] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[4] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[5] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[5] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[5] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[6] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[6] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[6] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[7] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[7] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[7] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[8] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[8] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[8] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[9] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[9] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[9] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[10] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[10] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[10] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[11] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[11] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[11] PASSED
+
+org.apache.kafka.clients.NetworkClientTest > testSimpleRequestResponse PASSED
+
+org.apache.kafka.clients.NetworkClientTest > testDisconnectDuringUserMetadataRequest PASSED
+
+org.apache.kafka.clients.NetworkClientTest > testClose PASSED
+
+org.apache.kafka.clients.NetworkClientTest > testLeastLoadedNode PASSED
+
+org.apache.kafka.clients.NetworkClientTest > testConnectionDelayConnected PASSED
+
+org.apache.kafka.clients.NetworkClientTest > testRequestTimeout PASSED
+
+org.apache.kafka.clients.producer.internals.DefaultPartitionerTest > testKeyPartitionIsStable PASSED
+
+org.apache.kafka.clients.producer.internals.DefaultPartitionerTest > testRoundRobinWithUnavailablePartitions PASSED
+
+org.apache.kafka.clients.NetworkClientTest > testSimpleRequestResponseWithStaticNodes PASSED
+
+org.apache.kafka.clients.NetworkClientTest > testConnectionDelay PASSED
+
+org.apache.kafka.clients.NetworkClientTest > testSendToUnreadyNode PASSED
+
+org.apache.kafka.clients.NetworkClientTest > testConnectionDelayDisconnected PASSED
+
+org.apache.kafka.common.metrics.MetricsTest > testSimpleStats PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[12] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[12] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[12] PASSED
+
+org.apache.kafka.common.metrics.MetricsTest > testOldDataHasNoEffect PASSED
+
+org.apache.kafka.common.metrics.MetricsTest > testQuotasEquality PASSED
+
+org.apache.kafka.common.metrics.MetricsTest > testRemoveInactiveMetrics PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[13] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[13] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[13] PASSED
+
+org.apache.kafka.common.metrics.MetricsTest > testMetricName PASSED
+
+org.apache.kafka.common.metrics.MetricsTest > testRateWindowing PASSED
+
+org.apache.kafka.common.metrics.MetricsTest > testTimeWindowing PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[14] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[14] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[14] PASSED
+
+org.apache.kafka.common.metrics.MetricsTest > testEventWindowing PASSED
+
+org.apache.kafka.common.metrics.MetricsTest > testRemoveMetric PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[15] PASSED
+
+org.apache.kafka.common.metrics.MetricsTest > testBadSensorHierarchy PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[15] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[15] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[16] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[16] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[16] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[17] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[17] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[17] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[18] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[18] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[18] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[19] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[19] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[19] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[20] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[20] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[20] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[21] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[21] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[21] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[22] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[22] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[22] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[23] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[23] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[23] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[24] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[24] PASSED
+
+org.apache.kafka.common.metrics.MetricsTest > testRemoveSensor PASSED
+
+org.apache.kafka.common.network.SelectorTest > testSendLargeRequest PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[24] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[25] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[25] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[25] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[26] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[26] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[26] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[27] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[27] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[27] PASSED
+
+org.apache.kafka.common.metrics.MetricsTest > testPercentiles PASSED
+
+org.apache.kafka.clients.producer.internals.SenderTest > testMetadataTopicExpiry PASSED
+
+org.apache.kafka.common.metrics.MetricsTest > testSampledStatInitialValue PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[28] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[28] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[28] PASSED
+
+org.apache.kafka.common.metrics.MetricsTest > testDuplicateMetricName PASSED
+
+org.apache.kafka.clients.producer.internals.SenderTest > testQuotaMetrics PASSED
+
+org.apache.kafka.common.metrics.MetricsTest > testQuotas PASSED
+
+org.apache.kafka.clients.producer.internals.SenderTest > testRetries PASSED
+
+org.apache.kafka.clients.producer.internals.SenderTest > testSendInOrder PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[29] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[29] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[29] PASSED
+
+org.apache.kafka.clients.producer.internals.SenderTest > testSimple PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[30] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[30] PASSED
+
+org.apache.kafka.common.metrics.MetricsTest > testHierarchicalSensors PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[30] PASSED
+
+org.apache.kafka.common.record.MemoryRecordsTest > testIterator[0] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[31] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[31] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[31] PASSED
+
+org.apache.kafka.common.record.MemoryRecordsTest > testHasRoomForMethod[1] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[32] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[32] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[32] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[33] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[33] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[33] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[34] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[34] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[34] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[35] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[35] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[35] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[36] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[36] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[36] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[37] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[37] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[37] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[38] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[38] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[38] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[39] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[39] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[39] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[40] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[40] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[40] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[41] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[41] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[41] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[42] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[42] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[42] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[43] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[43] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[43] PASSED
+
+org.apache.kafka.common.record.MemoryRecordsTest > testIterator[1] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[44] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[44] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[44] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[45] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[45] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[45] PASSED
+
+org.apache.kafka.clients.consumer.KafkaConsumerTest > testRegexSubscription PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[46] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[46] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[46] PASSED
+
+org.apache.kafka.common.protocol.ErrorsTest > testExceptionName PASSED
+
+org.apache.kafka.common.protocol.ErrorsTest > testForExceptionDefault PASSED
+
+org.apache.kafka.common.protocol.ErrorsTest > testUniqueExceptions PASSED
+
+org.apache.kafka.clients.producer.internals.ProducerInterceptorsTest > testOnAcknowledgementWithErrorChain PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[47] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[47] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[47] PASSED
+
+org.apache.kafka.clients.producer.internals.ProducerInterceptorsTest > testOnAcknowledgementChain PASSED
+
+org.apache.kafka.clients.producer.internals.ProducerInterceptorsTest > testOnSendChain PASSED
+
+org.apache.kafka.common.protocol.ErrorsTest > testForExceptionInheritance PASSED
+
+org.apache.kafka.common.protocol.ErrorsTest > testNoneException PASSED
+
+org.apache.kafka.common.protocol.ErrorsTest > testUniqueErrorCodes PASSED
+
+org.apache.kafka.common.protocol.ErrorsTest > testExceptionsAreNotGeneric PASSED
+
+org.apache.kafka.clients.consumer.internals.ConsumerCoordinatorTest > testRefreshOffsetUnknownTopicOrPartition PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[48] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[48] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[48] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[49] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[49] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[49] PASSED
+
+org.apache.kafka.clients.consumer.internals.ConsumerNetworkClientTest > blockWhenPollConditionNotSatisfied FAILED
+    java.lang.AssertionError: 
+      Expectation failure on verify:
+        NetworkClient.inFlightRequestCount(): expected: 1, actual: 0
+        at org.easymock.internal.MocksControl.verify(MocksControl.java:225)
+        at org.easymock.EasyMock.verify(EasyMock.java:2007)
+        at org.apache.kafka.clients.consumer.internals.ConsumerNetworkClientTest.blockWhenPollConditionNotSatisfied(ConsumerNetworkClientTest.java:120)
+
+org.apache.kafka.clients.consumer.internals.ConsumerNetworkClientTest > send PASSED
+
+org.apache.kafka.clients.consumer.internals.ConsumerNetworkClientTest > sendExpiry PASSED
+
+org.apache.kafka.clients.consumer.internals.ConsumerNetworkClientTest > blockOnlyForRetryBackoffIfNoInflightRequests FAILED
+    java.lang.AssertionError: 
+      Unexpected method call NetworkClient.poll(9223372036854775807, 13514987):
+        NetworkClient.inFlightRequestCount(): expected: 1, actual: 0
+        NetworkClient.poll(100, <any>): expected: 1, actual: 0
+        at org.easymock.internal.MockInvocationHandler.invoke(MockInvocationHandler.java:44)
+        at org.easymock.internal.ObjectMethodsFilter.invoke(ObjectMethodsFilter.java:94)
+        at org.easymock.internal.ClassProxyFactory$MockMethodInterceptor.intercept(ClassProxyFactory.java:97)
+        at org.apache.kafka.clients.NetworkClient$$EnhancerByCGLIB$$2a6478e4.poll(<generated>)
+        at org.apache.kafka.clients.consumer.internals.ConsumerNetworkClient.poll(ConsumerNetworkClient.java:228)
+        at org.apache.kafka.clients.consumer.internals.ConsumerNetworkClientTest.blockOnlyForRetryBackoffIfNoInflightRequests(ConsumerNetworkClientTest.java:135)
+
+org.apache.kafka.clients.consumer.internals.ConsumerNetworkClientTest > testAwaitForMetadataUpdateWithTimeout PASSED
+
+org.apache.kafka.clients.consumer.internals.ConsumerNetworkClientTest > doNotBlockIfPollConditionIsSatisfied PASSED
+
+org.apache.kafka.clients.MetadataTest > testListenerCanUnregister PASSED
+
+org.apache.kafka.clients.MetadataTest > testTopicExpiry PASSED
+
+org.apache.kafka.clients.MetadataTest > testFailedUpdate PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[50] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[50] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[50] PASSED
+
+org.apache.kafka.clients.consumer.internals.RequestFutureTest > invokeValueAfterFailure PASSED
+
+org.apache.kafka.clients.consumer.internals.RequestFutureTest > listenersInvokedIfAddedBeforeAndAfterFailure PASSED
+
+org.apache.kafka.clients.consumer.internals.RequestFutureTest > invokeCompleteAfterAlreadyFailed PASSED
+
+org.apache.kafka.clients.consumer.internals.RequestFutureTest > listenerInvokedIfAddedBeforeFutureFailure PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[51] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[51] PASSED
+
+org.apache.kafka.clients.consumer.internals.RequestFutureTest > listenersInvokedIfAddedBeforeAndAfterCompletion PASSED
+
+org.apache.kafka.clients.consumer.internals.RequestFutureTest > invokeCompleteAfterAlreadyComplete PASSED
+
+org.apache.kafka.clients.consumer.internals.RequestFutureTest > listenerInvokedIfAddedBeforeFutureCompletion PASSED
+
+org.apache.kafka.clients.consumer.internals.RequestFutureTest > testComposeFailureCase PASSED
+
+org.apache.kafka.clients.consumer.internals.RequestFutureTest > invokeExceptionAfterSuccess PASSED
+
+org.apache.kafka.clients.consumer.internals.RequestFutureTest > testComposeSuccessCase PASSED
+
+org.apache.kafka.clients.consumer.internals.ConsumerCoordinatorTest > testInvalidSessionTimeout PASSED
+
+org.apache.kafka.common.record.MemoryRecordsTest > testHasRoomForMethod[2] PASSED
+
+org.apache.kafka.clients.consumer.internals.ConsumerCoordinatorTest > testExcludeInternalTopicsConfigOption PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[51] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[52] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[52] PASSED
+
+org.apache.kafka.clients.consumer.internals.RequestFutureTest > testBasicCompletion PASSED
+
+org.apache.kafka.clients.consumer.internals.RequestFutureTest > testRuntimeExceptionInComplete PASSED
+
+org.apache.kafka.clients.consumer.internals.RequestFutureTest > invokeRaiseAfterAlreadyFailed PASSED
+
+org.apache.kafka.clients.consumer.internals.RequestFutureTest > testBasicFailure PASSED
+
+org.apache.kafka.clients.consumer.internals.RequestFutureTest > listenerInvokedIfAddedAfterFutureCompletion PASSED
+
+org.apache.kafka.clients.consumer.internals.RequestFutureTest > invokeRaiseAfterAlreadyCompleted PASSED
+
+org.apache.kafka.clients.consumer.internals.RequestFutureTest > listenerInvokedIfAddedAfterFutureFailure PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[52] PASSED
+
+org.apache.kafka.clients.consumer.internals.ConsumerCoordinatorTest > testCoordinatorDisconnect PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[53] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[53] PASSED
+
+org.apache.kafka.common.record.MemoryRecordsTest > testIterator[2] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[53] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[54] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[54] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[54] PASSED
+
+org.apache.kafka.clients.consumer.internals.RequestFutureTest > testVoidFuture PASSED
+
+org.apache.kafka.clients.consumer.internals.ConsumerCoordinatorTest > testCommitAfterLeaveGroup PASSED
+
+org.apache.kafka.clients.consumer.internals.ConsumerCoordinatorTest > testGroupDescribeUnauthorized PASSED
+
+org.apache.kafka.clients.consumer.internals.ConsumerCoordinatorTest > testRefreshOffsetLoadInProgress PASSED
+
+org.apache.kafka.clients.consumer.internals.ConsumerCoordinatorTest > testCommitOffsetOnly PASSED
+
+org.apache.kafka.clients.consumer.internals.ConsumerCoordinatorTest > testMaybeLeaveGroup PASSED
+
+org.apache.kafka.clients.consumer.internals.ConsumerCoordinatorTest > testMetadataChangeTriggersRebalance PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[55] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[55] PASSED
+
+org.apache.kafka.clients.consumer.internals.ConsumerCoordinatorTest > testCommitOffsetAsyncCoordinatorNotAvailable PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[55] PASSED
+
+org.apache.kafka.clients.consumer.internals.ConsumerCoordinatorTest > testUnknownMemberIdOnSyncGroup PASSED
+
+org.apache.kafka.clients.consumer.internals.ConsumerCoordinatorTest > testUnexpectedErrorOnSyncGroup PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[56] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[56] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[56] PASSED
+
+org.apache.kafka.clients.consumer.internals.AbstractCoordinatorTest > testWakeupAfterSyncGroupReceivedExternalCompletion PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[57] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[57] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[57] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[58] PASSED
+
+org.apache.kafka.clients.consumer.internals.AbstractCoordinatorTest > testCoordinatorDiscoveryBackoff PASSED
+
+org.apache.kafka.clients.consumer.internals.AbstractCoordinatorTest > testLookupCoordinator PASSED
+
+org.apache.kafka.clients.consumer.internals.ConsumerCoordinatorTest > testUpdateMetadataDuringRebalance PASSED
+
+org.apache.kafka.clients.consumer.internals.ConsumerCoordinatorTest > testIllegalGenerationOnSyncGroup PASSED
+
+org.apache.kafka.clients.consumer.internals.ConsumerCoordinatorTest > testCommitOffsetSyncCallbackWithNonRetriableException PASSED
+
+org.apache.kafka.clients.consumer.internals.ConsumerCoordinatorTest > testCommitOffsetMetadata PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[58] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[58] PASSED
+
+org.apache.kafka.clients.consumer.internals.ConsumerCoordinatorTest > testDisconnectInJoin PASSED
+
+org.apache.kafka.clients.consumer.internals.ConsumerCoordinatorTest > testCommitOffsetSyncCoordinatorDisconnected PASSED
+
+org.apache.kafka.clients.consumer.internals.ConsumerCoordinatorTest > testCommitOffsetAsyncFailedWithDefaultCallback PASSED
+
+org.apache.kafka.clients.consumer.internals.ConsumerCoordinatorTest > testCommitOffsetSyncNotCoordinator PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[59] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[59] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[59] PASSED
+
+org.apache.kafka.clients.consumer.internals.ConsumerCoordinatorTest > testMetadataRefreshDuringRebalance PASSED
+
+org.apache.kafka.clients.consumer.internals.ConsumerCoordinatorTest > testCommitOffsetRebalanceInProgress PASSED
+
+org.apache.kafka.clients.consumer.internals.ConsumerCoordinatorTest > testIllegalGeneration PASSED
+
+org.apache.kafka.clients.consumer.internals.ConsumerCoordinatorTest > testNormalHeartbeat PASSED
+
+org.apache.kafka.clients.consumer.internals.ConsumerCoordinatorTest > testRefreshOffset PASSED
+
+org.apache.kafka.common.record.MemoryRecordsTest > testHasRoomForMethod[3] PASSED
+
+org.apache.kafka.clients.consumer.internals.ConsumerCoordinatorTest > testAutoCommitDynamicAssignmentRebalance PASSED
+
+org.apache.kafka.clients.consumer.internals.ConsumerCoordinatorTest > testNormalJoinGroupFollower PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[60] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[60] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[60] PASSED
+
+org.apache.kafka.common.record.MemoryRecordsTest > testIterator[3] PASSED
+
+org.apache.kafka.clients.consumer.internals.ConsumerCoordinatorTest > testCommitOffsetSyncCoordinatorNotAvailable PASSED
+
+org.apache.kafka.clients.consumer.internals.ConsumerCoordinatorTest > testRefreshOffsetWithNoFetchableOffsets PASSED
+
+org.apache.kafka.clients.consumer.internals.ConsumerCoordinatorTest > testCommitUnknownTopicOrPartition PASSED
+
+org.apache.kafka.clients.consumer.internals.ConsumerCoordinatorTest > testProtocolMetadataOrder PASSED
+
+org.apache.kafka.clients.consumer.internals.ConsumerCoordinatorTest > testCommitOffsetAsyncWithDefaultCallback PASSED
+
+org.apache.kafka.clients.consumer.internals.ConsumerCoordinatorTest > testAutoCommitManualAssignmentCoordinatorUnknown PASSED
+
+org.apache.kafka.clients.consumer.internals.ConsumerCoordinatorTest > testWakeupDuringJoin PASSED
+
+org.apache.kafka.clients.consumer.internals.ConsumerCoordinatorTest > testCommitOffsetAsyncNotCoordinator PASSED
+
+org.apache.kafka.clients.producer.internals.BufferPoolTest > testStressfulSituation PASSED
+
+org.apache.kafka.clients.consumer.internals.ConsumerCoordinatorTest > testGroupReadUnauthorized PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[61] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[61] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[61] PASSED
+
+org.apache.kafka.clients.consumer.internals.ConsumerCoordinatorTest > testIncludeInternalTopicsConfigOption PASSED
+
+org.apache.kafka.clients.consumer.internals.AbstractCoordinatorTest > testWakeupAfterJoinGroupSentExternalCompletion PASSED
+
+org.apache.kafka.clients.consumer.internals.ConsumerCoordinatorTest > testRebalanceInProgressOnSyncGroup PASSED
+
+org.apache.kafka.clients.consumer.internals.ConsumerCoordinatorTest > testCommitOffsetUnknownMemberId PASSED
+
+org.apache.kafka.clients.consumer.internals.ConsumerCoordinatorTest > testUnknownConsumerId PASSED
+
+org.apache.kafka.clients.consumer.internals.ConsumerCoordinatorTest > testRefreshOffsetNotCoordinatorForConsumer PASSED
+
+org.apache.kafka.clients.consumer.internals.ConsumerCoordinatorTest > testCommitOffsetMetadataTooLarge PASSED
+
+org.apache.kafka.clients.consumer.internals.ConsumerCoordinatorTest > testCommitOffsetAsyncDisconnected PASSED
+
+org.apache.kafka.clients.consumer.internals.ConsumerCoordinatorTest > testAutoCommitDynamicAssignment PASSED
+
+org.apache.kafka.clients.consumer.internals.ConsumerCoordinatorTest > testLeaveGroupOnClose PASSED
+
+org.apache.kafka.clients.consumer.internals.ConsumerCoordinatorTest > testRejoinGroup PASSED
+
+org.apache.kafka.clients.consumer.internals.ConsumerCoordinatorTest > testAutoCommitManualAssignment PASSED
+
+org.apache.kafka.clients.consumer.KafkaConsumerTest > testPollWithEmptySubscription PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[62] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[62] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[62] PASSED
+
+org.apache.kafka.clients.consumer.internals.ConsumerCoordinatorTest > testNormalJoinGroupLeader PASSED
+
+org.apache.kafka.clients.consumer.internals.ConsumerCoordinatorTest > testJoinGroupInvalidGroupId PASSED
+
+org.apache.kafka.clients.consumer.internals.ConsumerCoordinatorTest > testCommitOffsetIllegalGeneration PASSED
+
+org.apache.kafka.clients.consumer.internals.ConsumerCoordinatorTest > testCoordinatorNotAvailable PASSED
+
+org.apache.kafka.clients.consumer.internals.ConsumerCoordinatorTest > testNotCoordinator PASSED
+
+org.apache.kafka.common.record.KafkaLZ4Test > testKafkaLZ4[0] PASSED
+
+org.apache.kafka.common.record.KafkaLZ4Test > testKafkaLZ4[1] PASSED
+
+org.apache.kafka.clients.consumer.KafkaConsumerTest > testPollWithEmptyUserAssignment PASSED
+
+org.apache.kafka.common.protocol.ProtoUtilsTest > schemaVersionOutOfRange PASSED
+
+org.apache.kafka.common.utils.UtilsTest > testAbs PASSED
+
+org.apache.kafka.common.record.KafkaLZ4Test > testKafkaLZ4[2] PASSED
+
+org.apache.kafka.common.record.KafkaLZ4Test > testKafkaLZ4[3] PASSED
+
+org.apache.kafka.common.utils.UtilsTest > testMin PASSED
+
+org.apache.kafka.common.utils.UtilsTest > testJoin PASSED
+
+org.apache.kafka.common.utils.UtilsTest > testReadBytes PASSED
+
+org.apache.kafka.common.utils.UtilsTest > testGetHost PASSED
+
+org.apache.kafka.common.utils.UtilsTest > testGetPort PASSED
+
+org.apache.kafka.common.utils.UtilsTest > testCloseAll PASSED
+
+org.apache.kafka.common.utils.UtilsTest > testFormatAddress PASSED
+
+org.apache.kafka.clients.consumer.KafkaConsumerTest > testConstructorClose PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[63] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[63] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[63] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[64] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[64] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[64] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[65] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[65] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[65] PASSED
+
+org.apache.kafka.common.security.kerberos.KerberosNameTest > testParse PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[66] PASSED
+
+org.apache.kafka.clients.consumer.KafkaConsumerTest > testAssignOnNullTopicInPartition PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[66] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[66] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[67] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[67] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[67] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[68] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[68] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[68] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[69] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[69] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[69] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[70] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[70] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[70] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[71] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[71] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[71] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[72] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[72] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[72] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[73] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[73] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[73] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[74] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[74] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[74] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[75] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[75] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[75] PASSED
+
+org.apache.kafka.clients.consumer.KafkaConsumerTest > testPause PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[76] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[76] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[76] PASSED
+
+org.apache.kafka.clients.consumer.internals.AbstractCoordinatorTest > testWakeupAfterJoinGroupSent PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[77] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[77] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[77] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[78] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[78] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[78] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[79] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[79] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[79] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[80] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[80] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[80] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[81] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[81] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[81] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[82] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[82] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[82] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[83] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[83] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[83] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[84] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[84] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[84] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[85] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[85] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[85] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[86] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[86] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[86] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[87] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[87] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[87] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[88] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[88] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[88] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[89] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[89] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[89] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[90] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[90] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[90] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[91] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[91] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[91] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[92] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[92] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[92] PASSED
+
+org.apache.kafka.clients.consumer.KafkaConsumerTest > testManualAssignmentChangeWithAutoCommitEnabled PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[93] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[93] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[93] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[94] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[94] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[94] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[95] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[95] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[95] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[96] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[96] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[96] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[97] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[97] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[97] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[98] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[98] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[98] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[99] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[99] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[99] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[100] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[100] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[100] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[101] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[101] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[101] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[102] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[102] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[102] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[103] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[103] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[103] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[104] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[104] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[104] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[105] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[105] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[105] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[106] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[106] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[106] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[107] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[107] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[107] PASSED
+
+org.apache.kafka.clients.consumer.KafkaConsumerTest > testSubscriptionChangesWithAutoCommitEnabled PASSED
+
+org.apache.kafka.clients.consumer.KafkaConsumerTest > testChangingRegexSubscription PASSED
+
+org.apache.kafka.clients.consumer.internals.AbstractCoordinatorTest > testWakeupAfterJoinGroupReceivedExternalCompletion PASSED
+
+org.apache.kafka.clients.consumer.KafkaConsumerTest > testPollWithNoSubscription PASSED
+
+org.apache.kafka.clients.consumer.KafkaConsumerTest > verifyNoCoordinatorLookupForManualAssignmentWithSeek PASSED
+
+org.apache.kafka.clients.consumer.KafkaConsumerTest > testInvalidSocketSendBufferSize PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[108] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[108] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[108] PASSED
+
+org.apache.kafka.clients.consumer.KafkaConsumerTest > testCommitsFetchedDuringAssign PASSED
+
+org.apache.kafka.clients.consumer.KafkaConsumerTest > testOsDefaultSocketBufferSizes PASSED
+
+org.apache.kafka.clients.consumer.KafkaConsumerTest > testAssignOnNullTopicPartition PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[109] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[109] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[109] PASSED
+
+org.apache.kafka.clients.producer.internals.RecordAccumulatorTest > testRetryBackoff PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[110] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[110] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[110] PASSED
+
+org.apache.kafka.clients.consumer.KafkaConsumerTest > testManualAssignmentChangeWithAutoCommitDisabled PASSED
+
+org.apache.kafka.clients.producer.internals.RecordAccumulatorTest > testNextReadyCheckDelay PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[111] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[111] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[111] PASSED
+
+org.apache.kafka.clients.consumer.KafkaConsumerTest > testSubscriptionChangesWithAutoCommitDisabled PASSED
+
+org.apache.kafka.clients.consumer.KafkaConsumerTest > testSeekNegative PASSED
+
+org.apache.kafka.clients.consumer.KafkaConsumerTest > testAssignOnEmptyTopicInPartition PASSED
+
+org.apache.kafka.clients.consumer.KafkaConsumerTest > testInvalidSocketReceiveBufferSize PASSED
+
+org.apache.kafka.clients.consumer.KafkaConsumerTest > testAutoCommitSentBeforePositionUpdate PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[112] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[112] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[112] PASSED
+
+org.apache.kafka.clients.consumer.KafkaConsumerTest > fetchResponseWithUnexpectedPartitionIsIgnored PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[113] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[113] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[113] PASSED
+
+org.apache.kafka.clients.consumer.KafkaConsumerTest > testSubscriptionOnNullPattern PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[114] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[114] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[114] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[115] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[115] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[115] PASSED
+
+org.apache.kafka.clients.consumer.internals.AbstractCoordinatorTest > testWakeupAfterSyncGroupSent PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[116] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[116] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[116] PASSED
+
+org.apache.kafka.clients.consumer.internals.SubscriptionStateTest > unsubscribeUserAssignment PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[117] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[117] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[117] PASSED
+
+org.apache.kafka.clients.consumer.internals.SubscriptionStateTest > cantSubscribePartitionAndPattern PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[118] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[118] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[118] PASSED
+
+org.apache.kafka.clients.consumer.internals.SubscriptionStateTest > partitionAssignment PASSED
+
+org.apache.kafka.clients.consumer.internals.SubscriptionStateTest > topicSubscription PASSED
+
+org.apache.kafka.clients.consumer.internals.SubscriptionStateTest > partitionPause PASSED
+
+org.apache.kafka.clients.consumer.internals.SubscriptionStateTest > partitionReset PASSED
+
+org.apache.kafka.clients.consumer.internals.SubscriptionStateTest > unsubscription PASSED
+
+org.apache.kafka.clients.consumer.internals.SubscriptionStateTest > patternSubscription PASSED
+
+org.apache.kafka.clients.consumer.internals.SubscriptionStateTest > partitionAssignmentChangeOnTopicSubscription PASSED
+
+org.apache.kafka.clients.consumer.internals.SubscriptionStateTest > cantSubscribeTopicAndPattern PASSED
+
+org.apache.kafka.clients.consumer.internals.SubscriptionStateTest > invalidPositionUpdate PASSED
+
+org.apache.kafka.clients.consumer.internals.SubscriptionStateTest > unsubscribeUserSubscribe PASSED
+
+org.apache.kafka.clients.consumer.internals.SubscriptionStateTest > cantChangePositionForNonAssignedPartition PASSED
+
+org.apache.kafka.clients.consumer.internals.SubscriptionStateTest > partitionAssignmentChangeOnPatternSubscription PASSED
+
+org.apache.kafka.clients.consumer.internals.SubscriptionStateTest > commitOffsetMetadata PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[119] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[119] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[119] PASSED
+
+org.apache.kafka.clients.consumer.internals.SubscriptionStateTest > cantSubscribePatternAndTopic PASSED
+
+org.apache.kafka.clients.consumer.internals.SubscriptionStateTest > cantSubscribePatternAndPartition PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[120] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[120] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[120] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[121] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[121] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[121] PASSED
+
+org.apache.kafka.clients.consumer.ConsumerRecordTest > testOldConstructor PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[122] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[122] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[122] PASSED
+
+org.apache.kafka.common.internals.PartitionStatesTest > testSet PASSED
+
+org.apache.kafka.common.internals.PartitionStatesTest > testClear PASSED
+
+org.apache.kafka.common.internals.PartitionStatesTest > testRemove PASSED
+
+org.apache.kafka.common.internals.PartitionStatesTest > testMoveToEnd PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[123] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[123] PASSED
+
+org.apache.kafka.common.internals.PartitionStatesTest > testUpdateAndMoveToEnd PASSED
+
+org.apache.kafka.common.internals.PartitionStatesTest > testPartitionValues PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[123] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[124] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[124] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[124] PASSED
+
+org.apache.kafka.clients.consumer.internals.AbstractCoordinatorTest > testWakeupAfterSyncGroupSentExternalCompletion PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[125] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[125] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[125] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[126] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[126] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[126] PASSED
+
+org.apache.kafka.common.network.SelectorTest > testLargeMessageSequence PASSED
+
+org.apache.kafka.common.network.SelectorTest > testMute PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[127] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[127] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[127] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[128] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[128] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[128] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[129] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[129] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[129] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[130] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[130] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[130] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[131] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[131] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[131] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[132] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[132] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[132] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[133] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[133] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[133] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[134] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[134] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[134] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[135] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[135] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[135] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[136] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[136] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[136] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[137] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[137] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[137] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[138] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[138] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[138] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[139] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[139] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[139] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[140] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[140] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[140] PASSED
+
+org.apache.kafka.common.network.SelectorTest > testCantSendWithInProgress PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[141] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[141] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[141] PASSED
+
+org.apache.kafka.common.network.SelectorTest > testExistingConnectionId PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[142] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[142] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[142] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[143] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[143] PASSED
+
+org.apache.kafka.common.network.SelectorTest > testCantSendWithoutConnecting PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[143] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[144] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[144] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[144] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[145] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[145] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[145] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[146] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[146] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[146] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[147] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[147] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[147] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[148] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[148] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[148] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[149] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[149] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[149] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[150] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[150] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[150] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[151] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[151] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[151] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[152] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[152] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[152] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[153] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[153] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[153] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[154] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[154] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[154] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[155] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[155] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[155] PASSED
+
+org.apache.kafka.common.network.SelectorTest > testCloseOldestConnection PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[156] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[156] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[156] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[157] PASSED
+
+org.apache.kafka.clients.consumer.internals.AbstractCoordinatorTest > testWakeupAfterSyncGroupReceived PASSED
+
+org.apache.kafka.common.network.SelectorTest > testServerDisconnect PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[157] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[157] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[158] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[158] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[158] PASSED
+
+org.apache.kafka.common.network.SelectorTest > testNoRouteToHost PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[159] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[159] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[159] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[160] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[160] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[160] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[161] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[161] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[161] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[162] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[162] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[162] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[163] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[163] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[163] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[164] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[164] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[164] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[165] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[165] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[165] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[166] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[166] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[166] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[167] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[167] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[167] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[168] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[168] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[168] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[169] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[169] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[169] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[170] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[170] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[170] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[171] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[171] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[171] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[172] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[172] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[172] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[173] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[173] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[173] PASSED
+
+org.apache.kafka.common.config.ConfigDefTest > testBasicTypes PASSED
+
+org.apache.kafka.clients.consumer.internals.AbstractCoordinatorTest > testUncaughtExceptionInHeartbeatThread PASSED
+
+org.apache.kafka.common.config.ConfigDefTest > testNullDefault PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[174] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[174] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[174] PASSED
+
+org.apache.kafka.common.config.ConfigDefTest > testParseForValidate PASSED
+
+org.apache.kafka.common.config.ConfigDefTest > testInvalidDefaultRange PASSED
+
+org.apache.kafka.common.config.ConfigDefTest > testGroupInference PASSED
+
+org.apache.kafka.common.config.ConfigDefTest > testValidators PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[175] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[175] PASSED
+
+org.apache.kafka.common.config.ConfigDefTest > testValidateCannotParse PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[175] PASSED
+
+org.apache.kafka.common.config.ConfigDefTest > testValidate PASSED
+
+org.apache.kafka.common.config.ConfigDefTest > testInvalidDefaultString PASSED
+
+org.apache.kafka.common.config.ConfigDefTest > testSslPasswords PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[176] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[176] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[176] PASSED
+
+org.apache.kafka.common.config.ConfigDefTest > testInvalidDefault PASSED
+
+org.apache.kafka.common.config.ConfigDefTest > toRst PASSED
+
+org.apache.kafka.common.config.ConfigDefTest > testMissingRequired PASSED
+
+org.apache.kafka.common.config.ConfigDefTest > testNullDefaultWithValidator PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[177] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[177] PASSED
+
+org.apache.kafka.common.config.ConfigDefTest > toEnrichedRst PASSED
+
+org.apache.kafka.common.config.ConfigDefTest > testDefinedTwice PASSED
+
+org.apache.kafka.common.config.ConfigDefTest > testBadInputs PASSED
+
+org.apache.kafka.common.config.ConfigDefTest > testValidateMissingConfigKey PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[177] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[178] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[178] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[178] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[179] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[179] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[179] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[180] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[180] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[180] PASSED
+
+org.apache.kafka.clients.producer.internals.RecordAccumulatorTest > testStressfulSituation PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[181] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[181] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[181] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[182] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[182] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[182] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[183] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[183] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[183] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[184] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[184] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[184] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[185] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[185] PASSED
+
+org.apache.kafka.clients.consumer.internals.AbstractCoordinatorTest > testWakeupAfterJoinGroupReceived PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[185] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[186] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[186] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[186] PASSED
+
+org.apache.kafka.common.utils.AbstractIteratorTest > testEmptyIterator PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[187] PASSED
+
+org.apache.kafka.common.utils.AbstractIteratorTest > testIterator PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[187] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[187] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[188] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[188] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[188] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[189] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[189] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[189] PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[190] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[190] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[190] PASSED
+
+org.apache.kafka.common.network.SelectorTest > testNormalOperation PASSED
+
+org.apache.kafka.common.record.RecordTest > testChecksum[191] PASSED
+
+org.apache.kafka.common.record.RecordTest > testEquality[191] PASSED
+
+org.apache.kafka.common.record.RecordTest > testFields[191] PASSED
+
+org.apache.kafka.common.network.SelectorTest > testConnectionRefused PASSED
+
+org.apache.kafka.common.network.SelectorTest > testEmptyRequest PASSED
+
+org.apache.kafka.common.protocol.types.ProtocolSerializationTest > testNulls PASSED
+
+org.apache.kafka.common.protocol.types.ProtocolSerializationTest > testToString PASSED
+
+org.apache.kafka.common.protocol.types.ProtocolSerializationTest > testReadStringSizeTooLarge PASSED
+
+org.apache.kafka.common.protocol.types.ProtocolSerializationTest > testNullableDefault PASSED
+
+org.apache.kafka.common.protocol.types.ProtocolSerializationTest > testReadNegativeStringSize PASSED
+
+org.apache.kafka.common.protocol.types.ProtocolSerializationTest > testReadArraySizeTooLarge PASSED
+
+org.apache.kafka.common.protocol.types.ProtocolSerializationTest > testDefault PASSED
+
+org.apache.kafka.common.protocol.types.ProtocolSerializationTest > testReadNegativeBytesSize PASSED
+
+org.apache.kafka.common.protocol.types.ProtocolSerializationTest > testReadBytesSizeTooLarge PASSED
+
+org.apache.kafka.common.protocol.types.ProtocolSerializationTest > testSimple PASSED
+
+org.apache.kafka.common.protocol.types.ProtocolSerializationTest > testReadNegativeArraySize PASSED
+
+org.apache.kafka.common.serialization.SerializationTest > testSerdeFromUnknown PASSED
+
+org.apache.kafka.common.serialization.SerializationTest > testDoubleSerializer PASSED
+
+org.apache.kafka.common.serialization.SerializationTest > testStringSerializer PASSED
+
+org.apache.kafka.common.serialization.SerializationTest > testIntegerSerializer PASSED
+
+org.apache.kafka.common.serialization.SerializationTest > testLongSerializer PASSED
+
+org.apache.kafka.common.serialization.SerializationTest > testSerdeFrom PASSED
+
+org.apache.kafka.common.serialization.SerializationTest > testSerdeFromNotNull PASSED
+
+org.apache.kafka.common.serialization.SerializationTest > testByteBufferSerializer PASSED
+
+org.apache.kafka.common.security.ssl.SslFactoryTest > testClientMode PASSED
+
+org.apache.kafka.common.security.authenticator.SaslAuthenticatorTest > testMissingUsernameSaslPlain PASSED
+
+org.apache.kafka.clients.consumer.KafkaConsumerTest > verifyHeartbeatSent PASSED
+
+org.apache.kafka.clients.producer.internals.BufferPoolTest > testCleanupMemoryAvailabilityWaiterOnInterruption PASSED
+
+org.apache.kafka.common.security.authenticator.SaslAuthenticatorTest > testUnauthenticatedApiVersionsRequestOverPlaintext PASSED
+
+org.apache.kafka.common.security.ssl.SslFactoryTest > testSslFactoryConfiguration PASSED
+
+org.apache.kafka.clients.producer.internals.RecordAccumulatorTest > testAwaitFlushComplete PASSED
+
+org.apache.kafka.clients.producer.internals.RecordAccumulatorTest > testFlush PASSED
+
+org.apache.kafka.clients.producer.internals.RecordAccumulatorTest > testFull PASSED
+
+org.apache.kafka.clients.producer.internals.RecordAccumulatorTest > testAbortIncompleteBatches PASSED
+
+org.apache.kafka.clients.producer.internals.RecordAccumulatorTest > testMutedPartitions PASSED
+
+org.apache.kafka.clients.producer.internals.RecordAccumulatorTest > testExpiredBatches PASSED
+
+org.apache.kafka.clients.producer.internals.RecordAccumulatorTest > testLinger PASSED
+
+org.apache.kafka.clients.producer.internals.RecordAccumulatorTest > testPartialDrain PASSED
+
+org.apache.kafka.clients.producer.internals.RecordAccumulatorTest > testAppendLarge PASSED
+
+org.apache.kafka.clients.consumer.internals.ConsumerProtocolTest > serializeDeserializeNullSubscriptionUserData PASSED
+
+org.apache.kafka.clients.consumer.internals.ConsumerProtocolTest > deserializeNewSubscriptionVersion PASSED
+
+org.apache.kafka.clients.consumer.internals.ConsumerProtocolTest > serializeDeserializeMetadata PASSED
+
+org.apache.kafka.clients.consumer.internals.ConsumerProtocolTest > deserializeNullAssignmentUserData PASSED
+
+org.apache.kafka.clients.consumer.internals.ConsumerProtocolTest > serializeDeserializeAssignment PASSED
+
+org.apache.kafka.clients.consumer.internals.ConsumerProtocolTest > deserializeNewAssignmentVersion PASSED
+
+org.apache.kafka.common.record.SimpleRecordTest > testIsValidWithFourBytesBuffer PASSED
+
+org.apache.kafka.common.record.SimpleRecordTest > testIsValidWithChecksumMismatch PASSED
+
+org.apache.kafka.common.record.SimpleRecordTest > testIsValidWithTooSmallBuffer PASSED
+
+org.apache.kafka.common.protocol.ApiKeysTest > testForIdWithInvalidIdLow PASSED
+
+org.apache.kafka.common.protocol.ApiKeysTest > testForIdWithInvalidIdHigh PASSED
+
+org.apache.kafka.clients.MetadataTest > testMetadataUpdateWaitTime PASSED
+
+org.apache.kafka.clients.MetadataTest > testUpdateWithNeedMetadataForAllTopics PASSED
+
+org.apache.kafka.clients.MetadataTest > testClusterListenerGetsNotifiedOfUpdate PASSED
+
+org.apache.kafka.clients.MetadataTest > testMetadata PASSED
+
+org.apache.kafka.clients.MetadataTest > testListenerGetsNotifiedOfUpdate PASSED
+
+org.apache.kafka.clients.MetadataTest > testNonExpiringMetadata PASSED
+
+org.apache.kafka.clients.producer.KafkaProducerTest > testInterceptorConstructClose PASSED
+
+org.apache.kafka.clients.producer.KafkaProducerTest > testOsDefaultSocketBufferSizes PASSED
+
+org.apache.kafka.clients.producer.KafkaProducerTest > testInvalidSocketSendBufferSize PASSED
+
+org.apache.kafka.clients.producer.KafkaProducerTest > testInvalidSocketReceiveBufferSize PASSED
+
+org.apache.kafka.clients.producer.KafkaProducerTest > testSerializerClose PASSED
+
+org.apache.kafka.common.security.authenticator.SaslAuthenticatorTest > testMechanismPluggability PASSED
+
+org.apache.kafka.clients.producer.KafkaProducerTest > testConstructorFailureCloseResource PASSED
+
+org.apache.kafka.common.security.authenticator.SaslAuthenticatorTest > testApiVersionsRequestWithUnsupportedVersion PASSED
+
+org.apache.kafka.common.security.authenticator.SaslAuthenticatorTest > testMissingPasswordSaslPlain PASSED
+
+org.apache.kafka.common.security.authenticator.SaslAuthenticatorTest > testInvalidLoginModule PASSED
+
+org.apache.kafka.common.security.authenticator.SaslAuthenticatorTest > testInvalidMechanism PASSED
+
+org.apache.kafka.common.security.authenticator.SaslAuthenticatorTest > testDisabledMechanism PASSED
+
+org.apache.kafka.clients.producer.KafkaProducerTest > testMetadataFetch PASSED
+
+org.apache.kafka.clients.consumer.KafkaConsumerTest > verifyHeartbeatSentWhenFetchedDataReady PASSED
+
+org.apache.kafka.clients.consumer.KafkaConsumerTest > testAssignOnEmptyTopicPartition PASSED
+
+org.apache.kafka.clients.consumer.KafkaConsumerTest > testSubscriptionOnNullTopic PASSED
+
+org.apache.kafka.clients.consumer.KafkaConsumerTest > testSubscription PASSED
+
+org.apache.kafka.clients.consumer.KafkaConsumerTest > testInterceptorConstructorClose PASSED
+
+org.apache.kafka.clients.consumer.KafkaConsumerTest > testSubscriptionOnEmptyTopic PASSED
+
+org.apache.kafka.clients.consumer.KafkaConsumerTest > testWakeupWithFetchDataAvailable PASSED
+
+org.apache.kafka.clients.consumer.KafkaConsumerTest > testSubscriptionOnNullTopicCollection PASSED
+
+org.apache.kafka.clients.consumer.ConsumerRecordsTest > iterator PASSED
+
+org.apache.kafka.common.metrics.JmxReporterTest > testJmxRegistration PASSED
+
+org.apache.kafka.common.cache.LRUCacheTest > testEviction PASSED
+
+org.apache.kafka.common.cache.LRUCacheTest > testPutGet PASSED
+
+org.apache.kafka.common.cache.LRUCacheTest > testRemove PASSED
+
+org.apache.kafka.common.security.authenticator.SaslAuthenticatorTest > testPacketSizeTooBig PASSED
+
+org.apache.kafka.common.network.SslTransportLayerTest > testClientAuthenticationRequestedValidProvided PASSED
+
+org.apache.kafka.common.security.authenticator.SaslAuthenticatorTest > testInvalidUsernameSaslPlain PASSED
+
+org.apache.kafka.common.network.SslTransportLayerTest > testClientAuthenticationRequiredNotProvided PASSED
+
+org.apache.kafka.clients.producer.KafkaProducerTest > testMetadataFetchOnStaleMetadata PASSED
+
+org.apache.kafka.clients.consumer.internals.ConsumerInterceptorsTest > testOnCommitChain PASSED
+
+org.apache.kafka.clients.consumer.internals.ConsumerInterceptorsTest > testOnConsumeChain PASSED
+
+org.apache.kafka.common.utils.CrcTest > testUpdateInt PASSED
+
+org.apache.kafka.common.utils.CrcTest > testUpdate PASSED
+
+org.apache.kafka.common.network.SslTransportLayerTest > testClientAuthenticationRequestedNotProvided PASSED
+
+org.apache.kafka.common.network.SslTransportLayerTest > testInvalidKeystorePassword PASSED
+
+org.apache.kafka.common.security.authenticator.SaslAuthenticatorTest > testMultipleServerMechanisms PASSED
+
+org.apache.kafka.common.network.SslTransportLayerTest > testClientAuthenticationDisabledNotProvided PASSED
+
+org.apache.kafka.common.security.authenticator.SaslAuthenticatorTest > testValidSaslPlainOverPlaintext PASSED
+
+org.apache.kafka.common.network.SslTransportLayerTest > testInvalidSecureRandomImplementation PASSED
+
+org.apache.kafka.common.network.SslTransportLayerTest > testInvalidEndpointIdentification PASSED
+
+org.apache.kafka.common.network.SslSelectorTest > testDisabledRenegotiation PASSED
+
+org.apache.kafka.common.security.authenticator.SaslAuthenticatorTest > testValidSaslPlainOverSsl PASSED
+
+org.apache.kafka.common.network.SslTransportLayerTest > testEndpointIdentificationDisabled PASSED
+
+org.apache.kafka.common.network.SslTransportLayerTest > testClientAuthenticationRequiredUntrustedProvided PASSED
+
+org.apache.kafka.common.security.authenticator.SaslAuthenticatorTest > testInvalidApiVersionsRequestSequence PASSED
+
+org.apache.kafka.common.network.SslSelectorTest > testRenegotiation PASSED
+
+org.apache.kafka.common.network.SslTransportLayerTest > testClientAuthenticationDisabledUntrustedProvided PASSED
+
+org.apache.kafka.clients.producer.internals.BufferPoolTest > testBlockTimeout PASSED
+
+org.apache.kafka.clients.producer.internals.BufferPoolTest > testCantAllocateMoreMemoryThanWeHave PASSED
+
+org.apache.kafka.common.security.authenticator.SaslAuthenticatorTest > testDisallowedKafkaRequestsBeforeAuthentication PASSED
+
+org.apache.kafka.common.network.SslSelectorTest > testSendLargeRequest PASSED
+
+org.apache.kafka.common.network.SslTransportLayerTest > testNetReadBufferResize PASSED
+
+org.apache.kafka.common.security.authenticator.SaslAuthenticatorTest > testUnauthenticatedApiVersionsRequestOverSsl PASSED
+
+org.apache.kafka.common.network.SslTransportLayerTest > testNetWriteBufferResize PASSED
+
+org.apache.kafka.common.network.SslTransportLayerTest > testInvalidTruststorePassword PASSED
+
+org.apache.kafka.common.security.authenticator.SaslAuthenticatorTest > testInvalidPasswordSaslPlain PASSED
+
+org.apache.kafka.common.network.SslTransportLayerTest > testApplicationBufferResize PASSED
+
+org.apache.kafka.common.security.authenticator.SaslAuthenticatorTest > testInvalidSaslPacket PASSED
+
+org.apache.kafka.common.security.authenticator.SaslAuthenticatorTest > testSaslHandshakeRequestWithUnsupportedVersion PASSED
+
+org.apache.kafka.common.network.SslTransportLayerTest > testClientAuthenticationRequiredValidProvided PASSED
+
+org.apache.kafka.common.network.SslTransportLayerTest > testInvalidKeyPassword PASSED
+
+org.apache.kafka.common.network.SslTransportLayerTest > testValidEndpointIdentification PASSED
+
+org.apache.kafka.common.config.AbstractConfigTest > testOriginalsWithPrefix PASSED
+
+org.apache.kafka.common.config.AbstractConfigTest > testConfiguredInstances PASSED
+
+org.apache.kafka.common.config.AbstractConfigTest > testUnused PASSED
+
+org.apache.kafka.common.config.AbstractConfigTest > testClassConfigs PASSED
+
+org.apache.kafka.common.network.SslSelectorTest > testLargeMessageSequence PASSED
+
+org.apache.kafka.common.network.SslSelectorTest > testMute PASSED
+
+org.apache.kafka.common.network.SslSelectorTest > testCantSendWithInProgress PASSED
+
+org.apache.kafka.common.network.SslSelectorTest > testExistingConnectionId PASSED
+
+org.apache.kafka.common.network.SslSelectorTest > testCantSendWithoutConnecting PASSED
+
+org.apache.kafka.common.network.SslSelectorTest > testCloseOldestConnection PASSED
+
+org.apache.kafka.common.network.SslSelectorTest > testServerDisconnect PASSED
+
+org.apache.kafka.common.network.SslSelectorTest > testNoRouteToHost PASSED
+
+org.apache.kafka.common.network.SslSelectorTest > testNormalOperation PASSED
+
+org.apache.kafka.common.network.SslSelectorTest > testConnectionRefused PASSED
+
+org.apache.kafka.common.network.SslSelectorTest > testEmptyRequest PASSED
+
+org.apache.kafka.common.ClusterTest > testBootstrap PASSED
+
+org.apache.kafka.clients.producer.internals.BufferPoolTest > testCleanupMemoryAvailabilityWaiterOnBlockTimeout PASSED
+
+org.apache.kafka.clients.producer.internals.BufferPoolTest > testSimple PASSED
+
+org.apache.kafka.clients.producer.internals.BufferPoolTest > testDelayedAllocation PASSED
+
+org.apache.kafka.clients.consumer.internals.FetcherTest > testUpdateFetchPositionResetToLatestOffset PASSED
+
+org.apache.kafka.clients.consumer.internals.FetcherTest > testFetchUnknownTopicOrPartition PASSED
+
+org.apache.kafka.clients.consumer.internals.FetcherTest > testFetchOffsetOutOfRange PASSED
+
+org.apache.kafka.clients.consumer.internals.FetcherTest > testFetchedRecordsRaisesOnSerializationErrors PASSED
+
+org.apache.kafka.clients.consumer.internals.FetcherTest > testQuotaMetrics PASSED
+
+org.apache.kafka.clients.consumer.internals.FetcherTest > testFetchMaxPollRecords PASSED
+
+org.apache.kafka.clients.consumer.internals.FetcherTest > testUpdateFetchPositionDisconnect PASSED
+
+org.apache.kafka.clients.consumer.internals.FetcherTest > testGetTopicMetadataInvalidTopic PASSED
+
+org.apache.kafka.clients.consumer.internals.FetcherTest > testUpdateFetchPositionResetToDefaultOffset PASSED
+
+org.apache.kafka.clients.consumer.internals.FetcherTest > testFetchError PASSED
+
+org.apache.kafka.clients.consumer.internals.FetcherTest > testFetchNonContinuousRecords PASSED
+
+org.apache.kafka.clients.consumer.internals.FetcherTest > testFetchNormal PASSED
+
+org.apache.kafka.clients.consumer.internals.FetcherTest > testGetAllTopicsTimeout PASSED
+
+org.apache.kafka.clients.consumer.internals.FetcherTest > testUnauthorizedTopic PASSED
+
+org.apache.kafka.clients.consumer.internals.FetcherTest > testGetAllTopicsUnauthorized PASSED
+
+org.apache.kafka.clients.consumer.internals.FetcherTest > testFetchNotLeaderForPartition PASSED
+
+org.apache.kafka.clients.consumer.internals.FetcherTest > testParseInvalidRecord PASSED
+
+org.apache.kafka.clients.consumer.internals.FetcherTest > testFetchedRecordsAfterSeek PASSED
+
+org.apache.kafka.clients.consumer.internals.FetcherTest > testFetchOffsetOutOfRangeException PASSED
+
+org.apache.kafka.clients.consumer.internals.FetcherTest > testFetchOnPausedPartition PASSED
+
+org.apache.kafka.clients.consumer.internals.FetcherTest > testGetOffsetsForTimes PASSED
+
+org.apache.kafka.clients.consumer.internals.FetcherTest > testFetchDuringRebalance PASSED
+
+org.apache.kafka.clients.consumer.internals.FetcherTest > testGetAllTopics PASSED
+
+org.apache.kafka.clients.consumer.internals.FetcherTest > testUpdateFetchPositionResetToEarliestOffset PASSED
+
+org.apache.kafka.clients.consumer.internals.FetcherTest > testStaleOutOfRangeError PASSED
+
+org.apache.kafka.clients.consumer.internals.FetcherTest > testInFlightFetchOnPausedPartition PASSED
+
+org.apache.kafka.clients.consumer.internals.FetcherTest > testGetOffsetsForTimesTimeout PASSED
+
+org.apache.kafka.clients.consumer.internals.FetcherTest > testFetchDisconnected PASSED
+
+org.apache.kafka.clients.consumer.internals.FetcherTest > testGetAllTopicsDisconnect PASSED
+
+org.apache.kafka.clients.consumer.internals.FetcherTest > testGetTopicMetadataLeaderNotAvailable PASSED
+
+org.apache.kafka.clients.consumer.internals.FetcherTest > testUpdateFetchPositionToCommitted PASSED
+
+org.apache.kafka.clients.consumer.internals.FetcherTest > testGetTopicMetadataUnknownTopic PASSED
+
+org.apache.kafka.common.requests.RequestResponseTest > testSerialization PASSED
+
+org.apache.kafka.common.requests.RequestResponseTest > fetchResponseVersionTest PASSED
+
+org.apache.kafka.common.requests.RequestResponseTest > produceResponseVersionTest PASSED
+
+org.apache.kafka.common.requests.RequestResponseTest > testControlledShutdownResponse PASSED
+
+org.apache.kafka.common.requests.RequestResponseTest > testRequestHeaderWithNullClientId PASSED
+
+org.apache.kafka.common.security.auth.KafkaPrincipalTest > testPrincipalNameCanContainSeparator PASSED
+
+org.apache.kafka.common.security.auth.KafkaPrincipalTest > testEqualsAndHashCode PASSED
+:clients:test FAILED
+4 actionable tasks: 3 executed, 1 up-to-date

@@ -1,0 +1,195 @@
+rss:
+  '@version': '0.92'
+  channel:
+    build-info:
+      build-date: 22-06-2022
+      build-number: '820010'
+      version: 8.20.10
+    description: This file is an XML representation of an issue
+    item:
+      assignee:
+        '#text': Jason Gustafson
+        '@username': hachikuji
+      attachments: null
+      comments:
+        comment:
+        - '#text': '<p>GitHub user hachikuji opened a pull request:</p>
+
+
+            <p>    <a href="https://github.com/apache/kafka/pull/2031" class="external-link"
+            target="_blank" rel="nofollow noopener">https://github.com/apache/kafka/pull/2031</a></p>
+
+
+            <p>    <a href="https://issues.apache.org/jira/browse/KAFKA-4303" title="KafkaConsumer
+            blocks unnecessarily in commitSync() " class="issue-link" data-issue-key="KAFKA-4303"><del>KAFKA-4303</del></a>:
+            Ensure commitSync does not block indefinitely in poll without in-flight
+            requests</p>
+
+
+
+
+            <p>You can merge this pull request into a Git repository by running:</p>
+
+
+            <p>    $ git pull <a href="https://github.com/hachikuji/kafka" class="external-link"
+            target="_blank" rel="nofollow noopener">https://github.com/hachikuji/kafka</a>
+            <a href="https://issues.apache.org/jira/browse/KAFKA-4303" title="KafkaConsumer
+            blocks unnecessarily in commitSync() " class="issue-link" data-issue-key="KAFKA-4303"><del>KAFKA-4303</del></a></p>
+
+
+            <p>Alternatively you can review and apply these changes as the patch at:</p>
+
+
+            <p>    <a href="https://github.com/apache/kafka/pull/2031.patch" class="external-link"
+            target="_blank" rel="nofollow noopener">https://github.com/apache/kafka/pull/2031.patch</a></p>
+
+
+            <p>To close this pull request, make a commit to your master/trunk branch<br/>
+
+            with (at least) the following in the commit message:</p>
+
+
+            <p>    This closes #2031</p>
+
+
+            <hr />
+
+            <p>commit ccba1a4ee7626230d9a6aed1e966d54d6e509c26<br/>
+
+            Author: Jason Gustafson &lt;jason@confluent.io&gt;<br/>
+
+            Date:   2016-10-14T20:29:06Z</p>
+
+
+            <p>    <a href="https://issues.apache.org/jira/browse/KAFKA-4303" title="KafkaConsumer
+            blocks unnecessarily in commitSync() " class="issue-link" data-issue-key="KAFKA-4303"><del>KAFKA-4303</del></a>:
+            Ensure commitSync does not block indefinitely in poll without in-flight
+            requests</p>
+
+
+            <hr />'
+          '@author': githubbot
+          '@created': Fri, 14 Oct 2016 20:35:05 +0000
+          '@id': '15576402'
+        - '#text': <p>Revised the title. The unnecessary blocking caused by the issue
+            above should be bounded in duration by the minimum of <tt>metadata.max.age.ms</tt>
+            and <tt>request.timeout.ms</tt> (this upper bound is enforced by <tt>NetworkClient</tt>).
+            We still probably need to fix this though because it prevents the offset
+            commit from being sent and results in the consumer being kicked out of
+            the group.</p>
+          '@author': hachikuji
+          '@created': Fri, 14 Oct 2016 21:19:50 +0000
+          '@id': '15576520'
+        - '#text': '<p>Issue resolved by pull request 2031<br/>
+
+            <a href="https://github.com/apache/kafka/pull/2031" class="external-link"
+            target="_blank" rel="nofollow noopener">https://github.com/apache/kafka/pull/2031</a></p>'
+          '@author': hachikuji
+          '@created': Fri, 14 Oct 2016 22:37:15 +0000
+          '@id': '15576758'
+        - '#text': '<p>Github user asfgit closed the pull request at:</p>
+
+
+            <p>    <a href="https://github.com/apache/kafka/pull/2031" class="external-link"
+            target="_blank" rel="nofollow noopener">https://github.com/apache/kafka/pull/2031</a></p>'
+          '@author': githubbot
+          '@created': Fri, 14 Oct 2016 22:37:37 +0000
+          '@id': '15576761'
+      component: consumer
+      created: Fri, 14 Oct 2016 18:46:06 +0000
+      customfields:
+        customfield:
+        - '@id': customfield_12310310
+          '@key': com.atlassian.jira.toolkit:attachments
+          customfieldname: Attachment count
+          customfieldvalues:
+            customfieldvalue: '0.0'
+        - '@id': customfield_12314020
+          '@key': com.atlassian.jira.plugins.jira-development-integration-plugin:devsummary
+          customfieldname: Development
+          customfieldvalues: null
+        - '@id': customfield_12313422
+          '@key': com.atlassian.jirafisheyeplugin:jobcheckbox
+          customfieldname: Enable Automatic Patch Review
+          customfieldvalues:
+            customfieldvalue: 'false'
+        - '@id': customfield_12310420
+          '@key': com.pyxis.greenhopper.jira:gh-global-rank
+          customfieldname: Global Rank
+          customfieldvalues:
+            customfieldvalue: '9223372036854775807'
+        - '@id': customfield_12312521
+          '@key': com.atlassian.jira.toolkit:LastCommentDate
+          customfieldname: Last public comment date
+          customfieldvalues: 8 years, 36 weeks ago
+        - '@id': customfield_12311820
+          '@key': com.pyxis.greenhopper.jira:gh-lexo-rank
+          customfieldname: Rank
+          customfieldvalues:
+            customfieldvalue: '0|i34wtj:'
+        - '@id': customfield_12310920
+          '@key': com.pyxis.greenhopper.jira:gh-global-rank
+          customfieldname: Rank (Obsolete)
+          customfieldvalues:
+            customfieldvalue: '9223372036854775807'
+      description: '<p>This appears to be a regression caused by the KIP-62 patch.
+        It is possible that we end up blocking unnecessarily in <tt>NetworkClient.poll()</tt>
+        with no requests pending. The reason is that <tt>ConsumerNetworkClient.poll(RequestFuture)</tt>
+        does not actually verify that the request has been sent prior to calling <tt>NetworkClient.poll()</tt>.
+        This was not as much of a problem previously because the maximum timeout was
+        always bounded by the heartbeat interval, which is typically small.</p>
+
+
+        <p>This appears to be the cause of hanging builds that some people may have
+        experienced. In particular, I have seen <tt>ConsumerBounceTest</tt> hang because
+        of this problem.</p>
+
+
+        <p>Note that another reason we can block indefinitely in <tt>commitSync()</tt>
+        is coordinator discovery. We do not attempt to fix this here.</p>'
+      due: null
+      environment: null
+      fixVersion: 0.10.1.0
+      key:
+        '#text': KAFKA-4303
+        '@id': '13012438'
+      labels: null
+      link: https://issues.apache.org/jira/browse/KAFKA-4303
+      priority:
+        '#text': Blocker
+        '@iconUrl': https://issues.apache.org/jira/images/icons/priorities/blocker.svg
+        '@id': '1'
+      project:
+        '#text': Kafka
+        '@id': '12311720'
+        '@key': KAFKA
+      reporter:
+        '#text': Jason Gustafson
+        '@username': hachikuji
+      resolution:
+        '#text': Fixed
+        '@id': '1'
+      resolved: Fri, 14 Oct 2016 22:37:14 +0000
+      status:
+        '#text': Resolved
+        '@description': A resolution has been taken, and it is awaiting verification
+          by reporter. From here issues are either reopened, or are closed.
+        '@iconUrl': https://issues.apache.org/jira/images/icons/statuses/resolved.png
+        '@id': '5'
+      statusCategory:
+        '@colorName': green
+        '@id': '3'
+        '@key': done
+      subtasks: null
+      summary: KafkaConsumer blocks unnecessarily in commitSync()
+      title: '[KAFKA-4303] KafkaConsumer blocks unnecessarily in commitSync()'
+      type:
+        '#text': Bug
+        '@iconUrl': https://issues.apache.org/jira/secure/viewavatar?size=xsmall&avatarId=21133&avatarType=issuetype
+        '@id': '1'
+      updated: Fri, 14 Oct 2016 22:37:37 +0000
+      votes: '0'
+      watches: '4'
+    language: en-uk
+    link: https://issues.apache.org/jira
+    title: ASF JIRA
