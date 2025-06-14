@@ -1,0 +1,488 @@
+rss:
+  '@version': '0.92'
+  channel:
+    build-info:
+      build-date: 22-06-2022
+      build-number: '820010'
+      version: 8.20.10
+    description: This file is an XML representation of an issue
+    item:
+      aggregateprogress:
+        '@percentage': '0'
+        currentProgress:
+          row:
+          - '@backgroundColor': '#51a825'
+            '@percentage': '0'
+          - '@backgroundColor': '#ec8e00'
+            '@percentage': '100'
+        originalProgress:
+          row:
+            '@backgroundColor': '#89afd7'
+            '@percentage': '100'
+      assignee:
+        '#text': Ewen Cheslack-Postava
+        '@username': ewencp
+      attachments: null
+      comments:
+        comment:
+        - '#text': <p>And I've now verified this is definitely a regression from 0.10.2</p>
+          '@author': ewencp
+          '@created': Thu, 22 Jun 2017 16:54:11 +0000
+          '@id': '16059679'
+        - '#text': '<p>GitHub user ewencp opened a pull request:</p>
+
+
+            <p>    <a href="https://github.com/apache/kafka/pull/3412" class="external-link"
+            target="_blank" rel="nofollow noopener">https://github.com/apache/kafka/pull/3412</a></p>
+
+
+            <p>    <a href="https://issues.apache.org/jira/browse/KAFKA-5498" title="Connect
+            validation API stops returning recommendations for some fields after the
+            right sequence of requests" class="issue-link" data-issue-key="KAFKA-5498"><del>KAFKA-5498</del></a>:
+            ConfigDef derived from another ConfigDef did not correctly compute parentless
+            configs</p>
+
+
+
+
+            <p>You can merge this pull request into a Git repository by running:</p>
+
+
+            <p>    $ git pull <a href="https://github.com/ewencp/kafka" class="external-link"
+            target="_blank" rel="nofollow noopener">https://github.com/ewencp/kafka</a>
+            kafka-5498-base-configdef-parentless-configs</p>
+
+
+            <p>Alternatively you can review and apply these changes as the patch at:</p>
+
+
+            <p>    <a href="https://github.com/apache/kafka/pull/3412.patch" class="external-link"
+            target="_blank" rel="nofollow noopener">https://github.com/apache/kafka/pull/3412.patch</a></p>
+
+
+            <p>To close this pull request, make a commit to your master/trunk branch<br/>
+
+            with (at least) the following in the commit message:</p>
+
+
+            <p>    This closes #3412</p>
+
+
+            <hr />
+
+            <p>commit 81020788083a9fe18bc465f1ab39fb4dac122f0a<br/>
+
+            Author: Ewen Cheslack-Postava &lt;me@ewencp.org&gt;<br/>
+
+            Date:   2017-06-22T19:03:47Z</p>
+
+
+            <p>    <a href="https://issues.apache.org/jira/browse/KAFKA-5498" title="Connect
+            validation API stops returning recommendations for some fields after the
+            right sequence of requests" class="issue-link" data-issue-key="KAFKA-5498"><del>KAFKA-5498</del></a>:
+            ConfigDef derived from another ConfigDef did not correctly compute parentless
+            configs</p>
+
+
+            <hr />'
+          '@author': githubbot
+          '@created': Thu, 22 Jun 2017 19:04:20 +0000
+          '@id': '16059866'
+        - '#text': '<p>Issue resolved by pull request 3412<br/>
+
+            <a href="https://github.com/apache/kafka/pull/3412" class="external-link"
+            target="_blank" rel="nofollow noopener">https://github.com/apache/kafka/pull/3412</a></p>'
+          '@author': gwenshap
+          '@created': Thu, 22 Jun 2017 20:00:44 +0000
+          '@id': '16059913'
+        - '#text': '<p>Github user asfgit closed the pull request at:</p>
+
+
+            <p>    <a href="https://github.com/apache/kafka/pull/3412" class="external-link"
+            target="_blank" rel="nofollow noopener">https://github.com/apache/kafka/pull/3412</a></p>'
+          '@author': githubbot
+          '@created': Thu, 22 Jun 2017 20:01:34 +0000
+          '@id': '16059914'
+      component: connect
+      created: Thu, 22 Jun 2017 16:48:03 +0000
+      customfields:
+        customfield:
+        - '@id': customfield_12310310
+          '@key': com.atlassian.jira.toolkit:attachments
+          customfieldname: Attachment count
+          customfieldvalues:
+            customfieldvalue: '0.0'
+        - '@id': customfield_12314020
+          '@key': com.atlassian.jira.plugins.jira-development-integration-plugin:devsummary
+          customfieldname: Development
+          customfieldvalues: null
+        - '@id': customfield_12313422
+          '@key': com.atlassian.jirafisheyeplugin:jobcheckbox
+          customfieldname: Enable Automatic Patch Review
+          customfieldvalues:
+            customfieldvalue: 'false'
+        - '@id': customfield_12310420
+          '@key': com.pyxis.greenhopper.jira:gh-global-rank
+          customfieldname: Global Rank
+          customfieldvalues:
+            customfieldvalue: '9223372036854775807'
+        - '@id': customfield_12312521
+          '@key': com.atlassian.jira.toolkit:LastCommentDate
+          customfieldname: Last public comment date
+          customfieldvalues: 8 years, 1 day ago
+        - '@id': customfield_12311820
+          '@key': com.pyxis.greenhopper.jira:gh-lexo-rank
+          customfieldname: Rank
+          customfieldvalues:
+            customfieldvalue: '0|i3gm7r:'
+        - '@id': customfield_12310920
+          '@key': com.pyxis.greenhopper.jira:gh-global-rank
+          customfieldname: Rank (Obsolete)
+          customfieldvalues:
+            customfieldvalue: '9223372036854775807'
+      description: "<p>If you issue the right sequence of requests against this API,\
+        \ it starts behaving differently, omitting  certain fields (at a minimum recommended\
+        \ values, which is how I noticed this). If you start with</p>\n\n<div class=\"\
+        code panel\" style=\"border-width: 1px;\"><div class=\"codeContent panelContent\"\
+        >\n<pre class=\"code-java\">$ curl -X PUT -H <span class=\"code-quote\">\"\
+        Content-Type: application/json\"</span> --data <span class=\"code-quote\"\
+        >'{<span class=\"code-quote\">\"connector.class\"</span>: <span class=\"code-quote\"\
+        >\"org.apache.kafka.connect.file.FileStreamSourceConnector\"</span>, <span\
+        \ class=\"code-quote\">\"name\"</span>: <span class=\"code-quote\">\"file\"\
+        </span>, <span class=\"code-quote\">\"transforms\"</span>: <span class=\"\
+        code-quote\">\"foo\"</span>}'</span> http:<span class=\"code-comment\">//localhost:8083/connector-plugins/org.apache.kafka.connect.file.FileStreamSourceConnector/config/validate\
+        \  | jq\n</span>  % Total    % Received % Xferd  Average Speed   Time    Time\
+        \     Time  Current\n                                 Dload  Upload   Total\
+        \   Spent    Left  Speed\n100  5845  100  5730  100   115  36642    735 --:--:--\
+        \ --:--:-- --:--:-- 36496\n{\n  <span class=\"code-quote\">\"name\"</span>:\
+        \ <span class=\"code-quote\">\"org.apache.kafka.connect.file.FileStreamSourceConnector\"\
+        </span>,\n  <span class=\"code-quote\">\"error_count\"</span>: 4,\n  <span\
+        \ class=\"code-quote\">\"groups\"</span>: [\n    <span class=\"code-quote\"\
+        >\"Common\"</span>,\n    <span class=\"code-quote\">\"Transforms\"</span>,\n\
+        \    <span class=\"code-quote\">\"Transforms: foo\"</span>\n  ],\n  <span\
+        \ class=\"code-quote\">\"configs\"</span>: [\n    {\n      <span class=\"\
+        code-quote\">\"definition\"</span>: {\n        <span class=\"code-quote\"\
+        >\"name\"</span>: <span class=\"code-quote\">\"name\"</span>,\n        <span\
+        \ class=\"code-quote\">\"type\"</span>: <span class=\"code-quote\">\"STRING\"\
+        </span>,\n        <span class=\"code-quote\">\"required\"</span>: <span class=\"\
+        code-keyword\">true</span>,\n        <span class=\"code-quote\">\"default_value\"\
+        </span>: <span class=\"code-keyword\">null</span>,\n        <span class=\"\
+        code-quote\">\"importance\"</span>: <span class=\"code-quote\">\"HIGH\"</span>,\n\
+        \        <span class=\"code-quote\">\"documentation\"</span>: <span class=\"\
+        code-quote\">\"Globally unique name to use <span class=\"code-keyword\">for</span>\
+        \ <span class=\"code-keyword\">this</span> connector.\"</span>,\n        <span\
+        \ class=\"code-quote\">\"group\"</span>: <span class=\"code-quote\">\"Common\"\
+        </span>,\n        <span class=\"code-quote\">\"width\"</span>: <span class=\"\
+        code-quote\">\"MEDIUM\"</span>,\n        <span class=\"code-quote\">\"display_name\"\
+        </span>: <span class=\"code-quote\">\"Connector name\"</span>,\n        <span\
+        \ class=\"code-quote\">\"dependents\"</span>: [],\n        <span class=\"\
+        code-quote\">\"order\"</span>: 1\n      },\n      <span class=\"code-quote\"\
+        >\"value\"</span>: {\n        <span class=\"code-quote\">\"name\"</span>:\
+        \ <span class=\"code-quote\">\"name\"</span>,\n        <span class=\"code-quote\"\
+        >\"value\"</span>: <span class=\"code-quote\">\"file\"</span>,\n        <span\
+        \ class=\"code-quote\">\"recommended_values\"</span>: [],\n        <span class=\"\
+        code-quote\">\"errors\"</span>: [],\n        <span class=\"code-quote\">\"\
+        visible\"</span>: <span class=\"code-keyword\">true</span>\n      }\n    },\n\
+        \    {\n      <span class=\"code-quote\">\"definition\"</span>: {\n      \
+        \  <span class=\"code-quote\">\"name\"</span>: <span class=\"code-quote\"\
+        >\"connector.class\"</span>,\n        <span class=\"code-quote\">\"type\"\
+        </span>: <span class=\"code-quote\">\"STRING\"</span>,\n        <span class=\"\
+        code-quote\">\"required\"</span>: <span class=\"code-keyword\">true</span>,\n\
+        \        <span class=\"code-quote\">\"default_value\"</span>: <span class=\"\
+        code-keyword\">null</span>,\n        <span class=\"code-quote\">\"importance\"\
+        </span>: <span class=\"code-quote\">\"HIGH\"</span>,\n        <span class=\"\
+        code-quote\">\"documentation\"</span>: <span class=\"code-quote\">\"Name or\
+        \ alias of the <span class=\"code-keyword\">class </span><span class=\"code-keyword\"\
+        >for</span> <span class=\"code-keyword\">this</span> connector. Must be a\
+        \ subclass of org.apache.kafka.connect.connector.Connector. If the connector\
+        \ is org.apache.kafka.connect.file.FileStreamSinkConnector, you can either\
+        \ specify <span class=\"code-keyword\">this</span> full name,  or use \\\"\
+        </span>FileStreamSink\\<span class=\"code-quote\">\" or \\\"</span>FileStreamSinkConnector\\\
+        <span class=\"code-quote\">\" to make the configuration a bit shorter\"</span>,\n\
+        \        <span class=\"code-quote\">\"group\"</span>: <span class=\"code-quote\"\
+        >\"Common\"</span>,\n        <span class=\"code-quote\">\"width\"</span>:\
+        \ <span class=\"code-quote\">\"LONG\"</span>,\n        <span class=\"code-quote\"\
+        >\"display_name\"</span>: <span class=\"code-quote\">\"Connector class\"</span>,\n\
+        \        <span class=\"code-quote\">\"dependents\"</span>: [],\n        <span\
+        \ class=\"code-quote\">\"order\"</span>: 2\n      },\n      <span class=\"\
+        code-quote\">\"value\"</span>: {\n        <span class=\"code-quote\">\"name\"\
+        </span>: <span class=\"code-quote\">\"connector.class\"</span>,\n        <span\
+        \ class=\"code-quote\">\"value\"</span>: <span class=\"code-quote\">\"org.apache.kafka.connect.file.FileStreamSourceConnector\"\
+        </span>,\n        <span class=\"code-quote\">\"recommended_values\"</span>:\
+        \ [],\n        <span class=\"code-quote\">\"errors\"</span>: [],\n       \
+        \ <span class=\"code-quote\">\"visible\"</span>: <span class=\"code-keyword\"\
+        >true</span>\n      }\n    },\n    {\n      <span class=\"code-quote\">\"\
+        definition\"</span>: {\n        <span class=\"code-quote\">\"name\"</span>:\
+        \ <span class=\"code-quote\">\"tasks.max\"</span>,\n        <span class=\"\
+        code-quote\">\"type\"</span>: <span class=\"code-quote\">\"INT\"</span>,\n\
+        \        <span class=\"code-quote\">\"required\"</span>: <span class=\"code-keyword\"\
+        >false</span>,\n        <span class=\"code-quote\">\"default_value\"</span>:\
+        \ <span class=\"code-quote\">\"1\"</span>,\n        <span class=\"code-quote\"\
+        >\"importance\"</span>: <span class=\"code-quote\">\"HIGH\"</span>,\n    \
+        \    <span class=\"code-quote\">\"documentation\"</span>: <span class=\"code-quote\"\
+        >\"Maximum number of tasks to use <span class=\"code-keyword\">for</span>\
+        \ <span class=\"code-keyword\">this</span> connector.\"</span>,\n        <span\
+        \ class=\"code-quote\">\"group\"</span>: <span class=\"code-quote\">\"Common\"\
+        </span>,\n        <span class=\"code-quote\">\"width\"</span>: <span class=\"\
+        code-quote\">\"SHORT\"</span>,\n        <span class=\"code-quote\">\"display_name\"\
+        </span>: <span class=\"code-quote\">\"Tasks max\"</span>,\n        <span class=\"\
+        code-quote\">\"dependents\"</span>: [],\n        <span class=\"code-quote\"\
+        >\"order\"</span>: 3\n      },\n      <span class=\"code-quote\">\"value\"\
+        </span>: {\n        <span class=\"code-quote\">\"name\"</span>: <span class=\"\
+        code-quote\">\"tasks.max\"</span>,\n        <span class=\"code-quote\">\"\
+        value\"</span>: <span class=\"code-quote\">\"1\"</span>,\n        <span class=\"\
+        code-quote\">\"recommended_values\"</span>: [],\n        <span class=\"code-quote\"\
+        >\"errors\"</span>: [],\n        <span class=\"code-quote\">\"visible\"</span>:\
+        \ <span class=\"code-keyword\">true</span>\n      }\n    },\n    {\n     \
+        \ <span class=\"code-quote\">\"definition\"</span>: {\n        <span class=\"\
+        code-quote\">\"name\"</span>: <span class=\"code-quote\">\"key.converter\"\
+        </span>,\n        <span class=\"code-quote\">\"type\"</span>: <span class=\"\
+        code-quote\">\"CLASS\"</span>,\n        <span class=\"code-quote\">\"required\"\
+        </span>: <span class=\"code-keyword\">false</span>,\n        <span class=\"\
+        code-quote\">\"default_value\"</span>: <span class=\"code-keyword\">null</span>,\n\
+        \        <span class=\"code-quote\">\"importance\"</span>: <span class=\"\
+        code-quote\">\"LOW\"</span>,\n        <span class=\"code-quote\">\"documentation\"\
+        </span>: <span class=\"code-quote\">\"Converter <span class=\"code-keyword\"\
+        >class </span>used to convert between Kafka Connect format and the serialized\
+        \ form that is written to Kafka. This controls the format of the keys in messages\
+        \ written to or read from Kafka, and since <span class=\"code-keyword\">this</span>\
+        \ is independent of connectors it allows any connector to work with any serialization\
+        \ format. Examples of common formats include JSON and Avro.\"</span>,\n  \
+        \      <span class=\"code-quote\">\"group\"</span>: <span class=\"code-quote\"\
+        >\"Common\"</span>,\n        <span class=\"code-quote\">\"width\"</span>:\
+        \ <span class=\"code-quote\">\"SHORT\"</span>,\n        <span class=\"code-quote\"\
+        >\"display_name\"</span>: <span class=\"code-quote\">\"Key converter class\"\
+        </span>,\n        <span class=\"code-quote\">\"dependents\"</span>: [],\n\
+        \        <span class=\"code-quote\">\"order\"</span>: 4\n      },\n      <span\
+        \ class=\"code-quote\">\"value\"</span>: {\n        <span class=\"code-quote\"\
+        >\"name\"</span>: <span class=\"code-quote\">\"key.converter\"</span>,\n \
+        \       <span class=\"code-quote\">\"value\"</span>: <span class=\"code-keyword\"\
+        >null</span>,\n        <span class=\"code-quote\">\"recommended_values\"</span>:\
+        \ [],\n        <span class=\"code-quote\">\"errors\"</span>: [],\n       \
+        \ <span class=\"code-quote\">\"visible\"</span>: <span class=\"code-keyword\"\
+        >true</span>\n      }\n    },\n    {\n      <span class=\"code-quote\">\"\
+        definition\"</span>: {\n        <span class=\"code-quote\">\"name\"</span>:\
+        \ <span class=\"code-quote\">\"value.converter\"</span>,\n        <span class=\"\
+        code-quote\">\"type\"</span>: <span class=\"code-quote\">\"CLASS\"</span>,\n\
+        \        <span class=\"code-quote\">\"required\"</span>: <span class=\"code-keyword\"\
+        >false</span>,\n        <span class=\"code-quote\">\"default_value\"</span>:\
+        \ <span class=\"code-keyword\">null</span>,\n        <span class=\"code-quote\"\
+        >\"importance\"</span>: <span class=\"code-quote\">\"LOW\"</span>,\n     \
+        \   <span class=\"code-quote\">\"documentation\"</span>: <span class=\"code-quote\"\
+        >\"Converter <span class=\"code-keyword\">class </span>used to convert between\
+        \ Kafka Connect format and the serialized form that is written to Kafka. This\
+        \ controls the format of the values in messages written to or read from Kafka,\
+        \ and since <span class=\"code-keyword\">this</span> is independent of connectors\
+        \ it allows any connector to work with any serialization format. Examples\
+        \ of common formats include JSON and Avro.\"</span>,\n        <span class=\"\
+        code-quote\">\"group\"</span>: <span class=\"code-quote\">\"Common\"</span>,\n\
+        \        <span class=\"code-quote\">\"width\"</span>: <span class=\"code-quote\"\
+        >\"SHORT\"</span>,\n        <span class=\"code-quote\">\"display_name\"</span>:\
+        \ <span class=\"code-quote\">\"Value converter class\"</span>,\n        <span\
+        \ class=\"code-quote\">\"dependents\"</span>: [],\n        <span class=\"\
+        code-quote\">\"order\"</span>: 5\n      },\n      <span class=\"code-quote\"\
+        >\"value\"</span>: {\n        <span class=\"code-quote\">\"name\"</span>:\
+        \ <span class=\"code-quote\">\"value.converter\"</span>,\n        <span class=\"\
+        code-quote\">\"value\"</span>: <span class=\"code-keyword\">null</span>,\n\
+        \        <span class=\"code-quote\">\"recommended_values\"</span>: [],\n \
+        \       <span class=\"code-quote\">\"errors\"</span>: [],\n        <span class=\"\
+        code-quote\">\"visible\"</span>: <span class=\"code-keyword\">true</span>\n\
+        \      }\n    },\n    {\n      <span class=\"code-quote\">\"definition\"</span>:\
+        \ {\n        <span class=\"code-quote\">\"name\"</span>: <span class=\"code-quote\"\
+        >\"transforms\"</span>,\n        <span class=\"code-quote\">\"type\"</span>:\
+        \ <span class=\"code-quote\">\"LIST\"</span>,\n        <span class=\"code-quote\"\
+        >\"required\"</span>: <span class=\"code-keyword\">false</span>,\n       \
+        \ <span class=\"code-quote\">\"default_value\"</span>: <span class=\"code-keyword\"\
+        >null</span>,\n        <span class=\"code-quote\">\"importance\"</span>: <span\
+        \ class=\"code-quote\">\"LOW\"</span>,\n        <span class=\"code-quote\"\
+        >\"documentation\"</span>: <span class=\"code-quote\">\"Aliases <span class=\"\
+        code-keyword\">for</span> the transformations to be applied to records.\"\
+        </span>,\n        <span class=\"code-quote\">\"group\"</span>: <span class=\"\
+        code-quote\">\"Transforms\"</span>,\n        <span class=\"code-quote\">\"\
+        width\"</span>: <span class=\"code-quote\">\"LONG\"</span>,\n        <span\
+        \ class=\"code-quote\">\"display_name\"</span>: <span class=\"code-quote\"\
+        >\"Transforms\"</span>,\n        <span class=\"code-quote\">\"dependents\"\
+        </span>: [],\n        <span class=\"code-quote\">\"order\"</span>: 6\n   \
+        \   },\n      <span class=\"code-quote\">\"value\"</span>: {\n        <span\
+        \ class=\"code-quote\">\"name\"</span>: <span class=\"code-quote\">\"transforms\"\
+        </span>,\n        <span class=\"code-quote\">\"value\"</span>: <span class=\"\
+        code-quote\">\"foo\"</span>,\n        <span class=\"code-quote\">\"recommended_values\"\
+        </span>: [],\n        <span class=\"code-quote\">\"errors\"</span>: [],\n\
+        \        <span class=\"code-quote\">\"visible\"</span>: <span class=\"code-keyword\"\
+        >true</span>\n      }\n    },\n    {\n      <span class=\"code-quote\">\"\
+        definition\"</span>: {\n        <span class=\"code-quote\">\"name\"</span>:\
+        \ <span class=\"code-quote\">\"transforms.foo.type\"</span>,\n        <span\
+        \ class=\"code-quote\">\"type\"</span>: <span class=\"code-quote\">\"CLASS\"\
+        </span>,\n        <span class=\"code-quote\">\"required\"</span>: <span class=\"\
+        code-keyword\">true</span>,\n        <span class=\"code-quote\">\"default_value\"\
+        </span>: <span class=\"code-keyword\">null</span>,\n        <span class=\"\
+        code-quote\">\"importance\"</span>: <span class=\"code-quote\">\"HIGH\"</span>,\n\
+        \        <span class=\"code-quote\">\"documentation\"</span>: <span class=\"\
+        code-quote\">\"<span class=\"code-object\">Class</span> <span class=\"code-keyword\"\
+        >for</span> the <span class=\"code-quote\">'foo'</span> transformation.\"\
+        </span>,\n        <span class=\"code-quote\">\"group\"</span>: <span class=\"\
+        code-quote\">\"Transforms: foo\"</span>,\n        <span class=\"code-quote\"\
+        >\"width\"</span>: <span class=\"code-quote\">\"LONG\"</span>,\n        <span\
+        \ class=\"code-quote\">\"display_name\"</span>: <span class=\"code-quote\"\
+        >\"Transformation type <span class=\"code-keyword\">for</span> foo\"</span>,\n\
+        \        <span class=\"code-quote\">\"dependents\"</span>: [],\n        <span\
+        \ class=\"code-quote\">\"order\"</span>: 0\n      },\n      <span class=\"\
+        code-quote\">\"value\"</span>: {\n        <span class=\"code-quote\">\"name\"\
+        </span>: <span class=\"code-quote\">\"transforms.foo.type\"</span>,\n    \
+        \    <span class=\"code-quote\">\"value\"</span>: <span class=\"code-keyword\"\
+        >null</span>,\n        <span class=\"code-quote\">\"recommended_values\"</span>:\
+        \ [\n          <span class=\"code-quote\">\"org.apache.kafka.connect.transforms.Cast$Key\"\
+        </span>,\n          <span class=\"code-quote\">\"org.apache.kafka.connect.transforms.Cast$Value\"\
+        </span>,\n          <span class=\"code-quote\">\"org.apache.kafka.connect.transforms.ExtractField$Key\"\
+        </span>,\n          <span class=\"code-quote\">\"org.apache.kafka.connect.transforms.ExtractField$Value\"\
+        </span>,\n          <span class=\"code-quote\">\"org.apache.kafka.connect.transforms.Flatten$Key\"\
+        </span>,\n          <span class=\"code-quote\">\"org.apache.kafka.connect.transforms.Flatten$Value\"\
+        </span>,\n          <span class=\"code-quote\">\"org.apache.kafka.connect.transforms.HoistField$Key\"\
+        </span>,\n          <span class=\"code-quote\">\"org.apache.kafka.connect.transforms.HoistField$Value\"\
+        </span>,\n          <span class=\"code-quote\">\"org.apache.kafka.connect.transforms.InsertField$Key\"\
+        </span>,\n          <span class=\"code-quote\">\"org.apache.kafka.connect.transforms.InsertField$Value\"\
+        </span>,\n          <span class=\"code-quote\">\"org.apache.kafka.connect.transforms.MaskField$Key\"\
+        </span>,\n          <span class=\"code-quote\">\"org.apache.kafka.connect.transforms.MaskField$Value\"\
+        </span>,\n          <span class=\"code-quote\">\"org.apache.kafka.connect.transforms.RegexRouter\"\
+        </span>,\n          <span class=\"code-quote\">\"org.apache.kafka.connect.transforms.ReplaceField$Key\"\
+        </span>,\n          <span class=\"code-quote\">\"org.apache.kafka.connect.transforms.ReplaceField$Value\"\
+        </span>,\n          <span class=\"code-quote\">\"org.apache.kafka.connect.transforms.SetSchemaMetadata$Key\"\
+        </span>,\n          <span class=\"code-quote\">\"org.apache.kafka.connect.transforms.SetSchemaMetadata$Value\"\
+        </span>,\n          <span class=\"code-quote\">\"org.apache.kafka.connect.transforms.TimestampConverter$Key\"\
+        </span>,\n          <span class=\"code-quote\">\"org.apache.kafka.connect.transforms.TimestampConverter$Value\"\
+        </span>,\n          <span class=\"code-quote\">\"org.apache.kafka.connect.transforms.TimestampRouter\"\
+        </span>,\n          <span class=\"code-quote\">\"org.apache.kafka.connect.transforms.ValueToKey\"\
+        </span>\n        ],\n        <span class=\"code-quote\">\"errors\"</span>:\
+        \ [\n          <span class=\"code-quote\">\"Missing required configuration\
+        \ \\\"</span>transforms.foo.type\\<span class=\"code-quote\">\" which has\
+        \ no <span class=\"code-keyword\">default</span> value.\"</span>,\n      \
+        \    <span class=\"code-quote\">\"Invalid value <span class=\"code-keyword\"\
+        >null</span> <span class=\"code-keyword\">for</span> configuration transforms.foo.type:\
+        \ Not a Transformation\"</span>\n        ],\n        <span class=\"code-quote\"\
+        >\"visible\"</span>: <span class=\"code-keyword\">true</span>\n      }\n \
+        \   },\n    {\n      <span class=\"code-quote\">\"definition\"</span>: {\n\
+        \        <span class=\"code-quote\">\"name\"</span>: <span class=\"code-quote\"\
+        >\"file\"</span>,\n        <span class=\"code-quote\">\"type\"</span>: <span\
+        \ class=\"code-quote\">\"STRING\"</span>,\n        <span class=\"code-quote\"\
+        >\"required\"</span>: <span class=\"code-keyword\">true</span>,\n        <span\
+        \ class=\"code-quote\">\"default_value\"</span>: <span class=\"code-keyword\"\
+        >null</span>,\n        <span class=\"code-quote\">\"importance\"</span>: <span\
+        \ class=\"code-quote\">\"HIGH\"</span>,\n        <span class=\"code-quote\"\
+        >\"documentation\"</span>: <span class=\"code-quote\">\"Source filename.\"\
+        </span>,\n        <span class=\"code-quote\">\"group\"</span>: <span class=\"\
+        code-keyword\">null</span>,\n        <span class=\"code-quote\">\"width\"\
+        </span>: <span class=\"code-quote\">\"NONE\"</span>,\n        <span class=\"\
+        code-quote\">\"display_name\"</span>: <span class=\"code-quote\">\"file\"\
+        </span>,\n        <span class=\"code-quote\">\"dependents\"</span>: [],\n\
+        \        <span class=\"code-quote\">\"order\"</span>: -1\n      },\n     \
+        \ <span class=\"code-quote\">\"value\"</span>: {\n        <span class=\"code-quote\"\
+        >\"name\"</span>: <span class=\"code-quote\">\"file\"</span>,\n        <span\
+        \ class=\"code-quote\">\"value\"</span>: <span class=\"code-keyword\">null</span>,\n\
+        \        <span class=\"code-quote\">\"recommended_values\"</span>: [],\n \
+        \       <span class=\"code-quote\">\"errors\"</span>: [\n          <span class=\"\
+        code-quote\">\"Missing required configuration \\\"</span>file\\<span class=\"\
+        code-quote\">\" which has no <span class=\"code-keyword\">default</span> value.\"\
+        </span>\n        ],\n        <span class=\"code-quote\">\"visible\"</span>:\
+        \ <span class=\"code-keyword\">true</span>\n      }\n    },\n    {\n     \
+        \ <span class=\"code-quote\">\"definition\"</span>: {\n        <span class=\"\
+        code-quote\">\"name\"</span>: <span class=\"code-quote\">\"topic\"</span>,\n\
+        \        <span class=\"code-quote\">\"type\"</span>: <span class=\"code-quote\"\
+        >\"STRING\"</span>,\n        <span class=\"code-quote\">\"required\"</span>:\
+        \ <span class=\"code-keyword\">true</span>,\n        <span class=\"code-quote\"\
+        >\"default_value\"</span>: <span class=\"code-keyword\">null</span>,\n   \
+        \     <span class=\"code-quote\">\"importance\"</span>: <span class=\"code-quote\"\
+        >\"HIGH\"</span>,\n        <span class=\"code-quote\">\"documentation\"</span>:\
+        \ <span class=\"code-quote\">\"The topic to publish data to\"</span>,\n  \
+        \      <span class=\"code-quote\">\"group\"</span>: <span class=\"code-keyword\"\
+        >null</span>,\n        <span class=\"code-quote\">\"width\"</span>: <span\
+        \ class=\"code-quote\">\"NONE\"</span>,\n        <span class=\"code-quote\"\
+        >\"display_name\"</span>: <span class=\"code-quote\">\"topic\"</span>,\n \
+        \       <span class=\"code-quote\">\"dependents\"</span>: [],\n        <span\
+        \ class=\"code-quote\">\"order\"</span>: -1\n      },\n      <span class=\"\
+        code-quote\">\"value\"</span>: {\n        <span class=\"code-quote\">\"name\"\
+        </span>: <span class=\"code-quote\">\"topic\"</span>,\n        <span class=\"\
+        code-quote\">\"value\"</span>: <span class=\"code-keyword\">null</span>,\n\
+        \        <span class=\"code-quote\">\"recommended_values\"</span>: [],\n \
+        \       <span class=\"code-quote\">\"errors\"</span>: [\n          <span class=\"\
+        code-quote\">\"Missing required configuration \\\"</span>topic\\<span class=\"\
+        code-quote\">\" which has no <span class=\"code-keyword\">default</span> value.\"\
+        </span>\n        ],\n        <span class=\"code-quote\">\"visible\"</span>:\
+        \ <span class=\"code-keyword\">true</span>\n      }\n    }\n  ]\n}\n</pre>\n\
+        </div></div>\n\n<p>You can see that the recommended values for transformations\
+        \ are there. However, if you do</p>\n\n<div class=\"code panel\" style=\"\
+        border-width: 1px;\"><div class=\"codeContent panelContent\">\n<pre class=\"\
+        code-java\">curl -X PUT -H <span class=\"code-quote\">\"Content-Type: application/json\"\
+        </span> --data <span class=\"code-quote\">'{<span class=\"code-quote\">\"\
+        connector.class\"</span>: <span class=\"code-quote\">\"org.apache.kafka.connect.file.FileStreamSourceConnector\"\
+        </span>, <span class=\"code-quote\">\"name\"</span>: <span class=\"code-quote\"\
+        >\"file\"</span>}'</span> http:<span class=\"code-comment\">//localhost:8083/connector-plugins/org.apache.kafka.connect.file.FileStreamSourceConnector/config/validate\
+        \  | jq</span>\n</pre>\n</div></div>\n\n<p>before that command, the recommended\
+        \ values will not appear.</p>"
+      due: null
+      environment: null
+      fixVersion: 0.11.0.0
+      key:
+        '#text': KAFKA-5498
+        '@id': '13081835'
+      labels: null
+      link: https://issues.apache.org/jira/browse/KAFKA-5498
+      priority:
+        '#text': Major
+        '@iconUrl': https://issues.apache.org/jira/images/icons/priorities/major.svg
+        '@id': '3'
+      progress:
+        '@percentage': '0'
+        currentProgress:
+          row:
+          - '@backgroundColor': '#51a825'
+            '@percentage': '0'
+          - '@backgroundColor': '#ec8e00'
+            '@percentage': '100'
+        originalProgress:
+          row:
+            '@backgroundColor': '#89afd7'
+            '@percentage': '100'
+      project:
+        '#text': Kafka
+        '@id': '12311720'
+        '@key': KAFKA
+      reporter:
+        '#text': Ewen Cheslack-Postava
+        '@username': ewencp
+      resolution:
+        '#text': Fixed
+        '@id': '1'
+      resolved: Thu, 22 Jun 2017 20:00:44 +0000
+      status:
+        '#text': Resolved
+        '@description': A resolution has been taken, and it is awaiting verification
+          by reporter. From here issues are either reopened, or are closed.
+        '@iconUrl': https://issues.apache.org/jira/images/icons/statuses/resolved.png
+        '@id': '5'
+      statusCategory:
+        '@colorName': green
+        '@id': '3'
+        '@key': done
+      subtasks: null
+      summary: Connect validation API stops returning recommendations for some fields
+        after the right sequence of requests
+      timeestimate:
+        '#text': 24h
+        '@seconds': '86400'
+      timeoriginalestimate:
+        '#text': 24h
+        '@seconds': '86400'
+      title: '[KAFKA-5498] Connect validation API stops returning recommendations
+        for some fields after the right sequence of requests'
+      type:
+        '#text': Bug
+        '@iconUrl': https://issues.apache.org/jira/secure/viewavatar?size=xsmall&avatarId=21133&avatarType=issuetype
+        '@id': '1'
+      updated: Tue, 25 Jul 2017 11:11:39 +0000
+      votes: '0'
+      watches: '3'
+      workratio:
+        '@workratioPercent': '0'
+    language: en-uk
+    link: https://issues.apache.org/jira
+    title: ASF JIRA
