@@ -1,0 +1,178 @@
+rss:
+  '@version': '0.92'
+  channel:
+    build-info:
+      build-date: 22-06-2022
+      build-number: '820010'
+      version: 8.20.10
+    description: This file is an XML representation of an issue
+    item:
+      assignee:
+        '#text': Jun Rao
+        '@username': junrao
+      attachments:
+        attachment:
+        - '@author': auradkar
+          '@created': Tue, 5 May 2015 02:52:27 +0000
+          '@id': '12730352'
+          '@name': KAFKA-1984_2015-05-04_19:52:19.patch
+          '@size': '166915'
+        - '@author': junrao
+          '@created': Tue, 24 Feb 2015 18:16:26 +0000
+          '@id': '12700536'
+          '@name': kafka-1984.patch
+          '@size': '7685'
+        - '@author': junrao
+          '@created': Tue, 24 Feb 2015 17:43:05 +0000
+          '@id': '12700528'
+          '@name': kafka-1984.patch
+          '@size': '9265'
+      comments:
+        comment:
+        - '#text': "<p>Created reviewboard <a href=\"https://reviews.apache.org/r/31363/diff/\"\
+            \ class=\"external-link\" target=\"_blank\" rel=\"nofollow noopener\"\
+            >https://reviews.apache.org/r/31363/diff/</a><br/>\n against branch origin/trunk</p>"
+          '@author': junrao
+          '@created': Tue, 24 Feb 2015 17:43:05 +0000
+          '@id': '14335141'
+        - '#text': "<p>There are actual two problems.</p>\n\n<p>1. The way that we\
+            \ select an available partition has a bug. We return the index of the\
+            \ partition. However, since partitions are not sorted, the index may not\
+            \ match the actual partition.<br/>\nfor (int i = 0; i &lt; numPartitions;\
+            \ i++) {<br/>\n    int partition = Utils.abs(counter.getAndIncrement())\
+            \ % numPartitions;<br/>\n    if (partitions.get(partition).leader() !=\
+            \ null) {<br/>\n        return partition; --&gt; should be changed to\
+            \ return the actual<br/>\n2. The way that we use counter in Partitioner\
+            \ may cause an unavailable partition to be selected when there are concurrent\
+            \ threads producing data to the same producer instance.</p>\n\n<p>Attaching\
+            \ a patch.</p>"
+          '@author': junrao
+          '@created': Tue, 24 Feb 2015 17:43:32 +0000
+          '@id': '14335142'
+        - '#text': "<p>Created reviewboard <a href=\"https://reviews.apache.org/r/31367/diff/\"\
+            \ class=\"external-link\" target=\"_blank\" rel=\"nofollow noopener\"\
+            >https://reviews.apache.org/r/31367/diff/</a><br/>\n against branch origin/0.8.2</p>"
+          '@author': junrao
+          '@created': Tue, 24 Feb 2015 18:16:26 +0000
+          '@id': '14335183'
+        - '#text': <p>Attaching a fix for 0.8.2 too.</p>
+          '@author': junrao
+          '@created': Tue, 24 Feb 2015 18:16:47 +0000
+          '@id': '14335184'
+        - '#text': <p>Marking this a blocker for 0.8.2.1 since it affects the use
+            case where replication factor is 1.</p>
+          '@author': junrao
+          '@created': Tue, 24 Feb 2015 21:46:01 +0000
+          '@id': '14335513'
+        - '#text': <p>Thanks for the reviews. Committed to 0.8.2 and trunk.</p>
+          '@author': junrao
+          '@created': Tue, 24 Feb 2015 22:08:10 +0000
+          '@id': '14335548'
+        - '#text': "<p>Updated reviewboard <a href=\"https://reviews.apache.org/r/33049/diff/\"\
+            \ class=\"external-link\" target=\"_blank\" rel=\"nofollow noopener\"\
+            >https://reviews.apache.org/r/33049/diff/</a><br/>\n against branch origin/trunk</p>"
+          '@author': auradkar
+          '@created': Tue, 5 May 2015 02:52:28 +0000
+          '@id': '14527818'
+        - '#text': <p><a href="https://issues.apache.org/jira/secure/ViewProfile.jspa?name=auradkar"
+            class="user-hover" rel="auradkar">auradkar</a>, did you attach the patch
+            to the wrong jira? This one is already resolved.</p>
+          '@author': junrao
+          '@created': Tue, 5 May 2015 04:05:01 +0000
+          '@id': '14527865'
+        - '#text': <p><a href="https://issues.apache.org/jira/secure/ViewProfile.jspa?name=junrao"
+            class="user-hover" rel="junrao">junrao</a> My bad.. I attached to 1984
+            instead of 2084.</p>
+          '@author': aauradkar
+          '@created': Tue, 5 May 2015 04:34:47 +0000
+          '@id': '14527887'
+      component: producer
+      created: Tue, 24 Feb 2015 01:35:55 +0000
+      customfields:
+        customfield:
+        - '@id': customfield_12310310
+          '@key': com.atlassian.jira.toolkit:attachments
+          customfieldname: Attachment count
+          customfieldvalues:
+            customfieldvalue: '3.0'
+        - '@id': customfield_12314020
+          '@key': com.atlassian.jira.plugins.jira-development-integration-plugin:devsummary
+          customfieldname: Development
+          customfieldvalues: null
+        - '@id': customfield_12313422
+          '@key': com.atlassian.jirafisheyeplugin:jobcheckbox
+          customfieldname: Enable Automatic Patch Review
+          customfieldvalues:
+            customfieldvalue: 'false'
+        - '@id': customfield_12310420
+          '@key': com.pyxis.greenhopper.jira:gh-global-rank
+          customfieldname: Global Rank
+          customfieldvalues:
+            customfieldvalue: '9223372036854775807'
+        - '@id': customfield_12312521
+          '@key': com.atlassian.jira.toolkit:LastCommentDate
+          customfieldname: Last public comment date
+          customfieldvalues: 10 years, 7 weeks, 4 days ago
+        - '@id': customfield_12311820
+          '@key': com.pyxis.greenhopper.jira:gh-lexo-rank
+          customfieldname: Rank
+          customfieldvalues:
+            customfieldvalue: '0|i25ycf:'
+        - '@id': customfield_12310920
+          '@key': com.pyxis.greenhopper.jira:gh-global-rank
+          customfieldname: Rank (Obsolete)
+          customfieldvalues:
+            customfieldvalue: '9223372036854775807'
+      description: <p>In Partitioner, we cycle through each partition to find one
+        whose leader is available. However, since the counter is shared among different
+        caller threads, the logic may not iterate through every partition. The impact
+        is that we could return an unavailable partition to the caller when there
+        are partitions available. If the partition is unavailable for a long time,
+        the producer may block due to bufferpool being full.</p>
+      due: null
+      environment: null
+      fixVersion: 0.8.2.1
+      key:
+        '#text': KAFKA-1984
+        '@id': '12777015'
+      labels: null
+      link: https://issues.apache.org/jira/browse/KAFKA-1984
+      priority:
+        '#text': Blocker
+        '@iconUrl': https://issues.apache.org/jira/images/icons/priorities/blocker.svg
+        '@id': '1'
+      project:
+        '#text': Kafka
+        '@id': '12311720'
+        '@key': KAFKA
+      reporter:
+        '#text': Jun Rao
+        '@username': junrao
+      resolution:
+        '#text': Fixed
+        '@id': '1'
+      resolved: Tue, 24 Feb 2015 22:08:10 +0000
+      status:
+        '#text': Resolved
+        '@description': A resolution has been taken, and it is awaiting verification
+          by reporter. From here issues are either reopened, or are closed.
+        '@iconUrl': https://issues.apache.org/jira/images/icons/statuses/resolved.png
+        '@id': '5'
+      statusCategory:
+        '@colorName': green
+        '@id': '3'
+        '@key': done
+      subtasks: null
+      summary: java producer may miss an available partition
+      title: '[KAFKA-1984] java producer may miss an available partition'
+      type:
+        '#text': Bug
+        '@iconUrl': https://issues.apache.org/jira/secure/viewavatar?size=xsmall&avatarId=21133&avatarType=issuetype
+        '@id': '1'
+      updated: Tue, 5 May 2015 04:34:47 +0000
+      version: 0.8.2.0
+      votes: '0'
+      watches: '4'
+    language: en-uk
+    link: https://issues.apache.org/jira
+    title: ASF JIRA
