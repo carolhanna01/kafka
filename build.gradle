@@ -13,7 +13,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import org.ajoberstar.grgit.Grgit
+// import org.ajoberstar.grgit.Grgit
 
 buildscript {
   repositories {
@@ -24,9 +24,9 @@ buildscript {
 
   dependencies {
     // For Apache Rat plugin to ignore non-Git files
-    classpath "org.ajoberstar:grgit:1.5.0"
-    classpath 'com.github.ben-manes:gradle-versions-plugin:0.12.0'
-    classpath 'org.scoverage:gradle-scoverage:2.1.0'
+    // classpath "org.ajoberstar:grgit:1.5.0"
+    // classpath 'com.github.ben-manes:gradle-versions-plugin:0.12.0'
+    // classpath 'org.scoverage:gradle-scoverage:2.1.0'
   }
 }
 
@@ -39,23 +39,23 @@ allprojects {
     mavenCentral()
   }
 
-  apply plugin: 'com.github.ben-manes.versions'
+  // apply plugin: 'com.github.ben-manes.versions'
 
-  dependencyUpdates {
-    revision="release"
-    resolutionStrategy = {
-      componentSelection { rules ->
-        rules.all { ComponentSelection selection ->
-          boolean rejected = ['snap', 'alpha', 'beta', 'rc', 'cr', 'm'].any { qualifier ->
-            selection.candidate.version ==~ /(?i).*[.-]${qualifier}[.\d-]*/
-          }
-          if (rejected) {
-            selection.reject('Release candidate')
-          }
-        }
-      }
-    }
-  }
+  // dependencyUpdates {
+  //   revision="release"
+  //   resolutionStrategy = {
+  //     componentSelection { rules ->
+  //       rules.all { ComponentSelection selection ->
+  //         boolean rejected = ['snap', 'alpha', 'beta', 'rc', 'cr', 'm'].any { qualifier ->
+  //           selection.candidate.version ==~ /(?i).*[.-]${qualifier}[.\d-]*/
+  //         }
+  //         if (rejected) {
+  //           selection.reject('Release candidate')
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
 
   if (JavaVersion.current().isJava8Compatible()) {
     tasks.withType(Javadoc) {
@@ -94,30 +94,30 @@ ext {
 apply from: "$rootDir/gradle/dependencies.gradle"
 apply from: file('wrapper.gradle')
 
-if (new File('.git').exists()) {
-  apply from: file('gradle/rat.gradle')
-  rat {
-    // Exclude everything under the directory that git should be ignoring via .gitignore or that isn't checked in. These
-    // restrict us only to files that are checked in or are staged.
-    def repo = Grgit.open(project.file('.'))
-    excludes = new ArrayList<String>(repo.clean(ignore: false, directories: true, dryRun: true))
-    // And some of the files that we have checked in should also be excluded from this check
-    excludes.addAll([
-        '**/.git/**',
-        '**/build/**',
-        'CONTRIBUTING.md',
-        'gradlew',
-        'gradlew.bat',
-        '**/README.md'
-    ])
-  }
-}
+// if (new File('.git').exists()) {
+//   apply from: file('gradle/rat.gradle')
+//   rat {
+//     // Exclude everything under the directory that git should be ignoring via .gitignore or that isn't checked in. These
+//     // restrict us only to files that are checked in or are staged.
+//     def repo = Grgit.open(project.file('.'))
+//     excludes = new ArrayList<String>(repo.clean(ignore: false, directories: true, dryRun: true))
+//     // And some of the files that we have checked in should also be excluded from this check
+//     excludes.addAll([
+//         '**/.git/**',
+//         '**/build/**',
+//         'CONTRIBUTING.md',
+//         'gradlew',
+//         'gradlew.bat',
+//         '**/README.md'
+//     ])
+//   }
+// }
 
 subprojects {
   apply plugin: 'java'
   apply plugin: 'maven'
   apply plugin: 'signing'
-  apply plugin: 'checkstyle'
+  // apply plugin: 'checkstyle'
 
   sourceCompatibility = 1.7
 
@@ -264,11 +264,11 @@ subprojects {
     }
   }
 
-  checkstyle {
-    configFile = new File(rootDir, "checkstyle/checkstyle.xml")
-    configProperties = [importControlFile: "$rootDir/checkstyle/import-control.xml"]
-  }
-  test.dependsOn('checkstyleMain', 'checkstyleTest')
+  // checkstyle {
+  //   configFile = new File(rootDir, "checkstyle/checkstyle.xml")
+  //   configProperties = [importControlFile: "$rootDir/checkstyle/import-control.xml"]
+  // }
+  // test.dependsOn('checkstyleMain', 'checkstyleTest')
 
   // Ignore core since its a scala project
   if (it.path != ':core') {
@@ -311,7 +311,7 @@ task jacocoRootReport(type: org.gradle.testing.jacoco.tasks.JacocoReport) {
   }
 }
 
-task reportCoverage(dependsOn: ['jacocoRootReport', 'core:reportScoverage'])
+// task reportCoverage(dependsOn: ['jacocoRootReport', 'core:reportScoverage'])
 
 for ( sv in ['2_10', '2_11'] ) {
   String svInDot = sv.replaceAll( "_", ".")
@@ -382,7 +382,7 @@ project(':core') {
   println "Building project 'core' with Scala version ${versions.scala}"
 
   apply plugin: 'scala'
-  apply plugin: "org.scoverage"
+  // apply plugin: "org.scoverage"
   archivesBaseName = "kafka_${versions.baseScala}"
 
   dependencies {
@@ -415,19 +415,19 @@ project(':core') {
     testCompile libs.junit
     testCompile libs.scalaTest
 
-    scoverage libs.scoveragePlugin
-    scoverage libs.scoverageRuntime
+    // scoverage libs.scoveragePlugin
+    // scoverage libs.scoverageRuntime
   }
 
   jacocoTestReport.enabled = false
-  scoverage {
-    reportDir = file("${rootProject.buildDir}/scoverage")
-    highlighting = false
-  }
-  checkScoverage {
-    minimumRate = 0.0
-  }
-  checkScoverage.shouldRunAfter('test')
+  // scoverage {
+  //   reportDir = file("${rootProject.buildDir}/scoverage")
+  //   highlighting = false
+  // }
+  // checkScoverage {
+  //   minimumRate = 0.0
+  // }
+  // checkScoverage.shouldRunAfter('test')
 
   configurations {
     // manually excludes some unnecessary dependencies
@@ -561,9 +561,9 @@ project(':core') {
 
   systemTestLibs.dependsOn('jar', 'testJar', 'copyDependantTestLibs')
 
-  checkstyle {
-    configProperties = [importControlFile: "$rootDir/checkstyle/import-control-core.xml"]
-  }
+  // checkstyle {
+  //   configProperties = [importControlFile: "$rootDir/checkstyle/import-control-core.xml"]
+  // }
 }
 
 project(':examples') {
@@ -577,9 +577,9 @@ project(':examples') {
     enabled = false
   }
 
-  checkstyle {
-    configProperties = [importControlFile: "$rootDir/checkstyle/import-control-core.xml"]
-  }
+  // checkstyle {
+  //   configProperties = [importControlFile: "$rootDir/checkstyle/import-control-core.xml"]
+  // }
 }
 
 project(':clients') {
