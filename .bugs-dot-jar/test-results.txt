@@ -1,0 +1,7 @@
+Building project 'core' with Scala version 2.11.11
+:clients:compileJava UP-TO-DATE
+:clients:processResources NO-SOURCE
+:clients:classes UP-TO-DATE
+:clients:findbugsMain UP-TO-DATE
+:clients:compileTestJava FAILED
+3 actionable tasks: 1 executed, 2 up-to-date
